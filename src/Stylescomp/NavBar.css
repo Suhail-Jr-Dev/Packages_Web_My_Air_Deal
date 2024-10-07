@@ -1,0 +1,36 @@
+  @keyframes flightUp {
+      0% {
+          transform: translateX(-30px);
+          /* transform: translateX(100px); */
+          /* Starting position */
+      }
+
+      30%{
+
+        transform: translateX(-50px);
+        transform: translateY(-50px);
+
+      }
+
+      50%{
+        transform: translateX(-90px);
+        transform: translateY(-90px);
+    }
+    
+    80%{
+        transform: translateX(-110px);
+        transform: translateY(-110px);
+      }
+
+      100% {
+          transform: translateX(-120px);
+          transform: translateY(-120px);
+          /* transform: translateX(-30px); */
+          /* Moving the image up */
+      }
+  }
+
+  .animate-flightUp {
+      animation: flightUp 3s ease-in-out forwards;
+      /* Flight image will move up */
+  }

@@ -1,0 +1,23 @@
+ .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;  
+  }
+  
+
+  .carousel-item {
+    overflow: hidden;
+  }
+  
+  .no-scrollbar {
+    scrollbar-width: none; 
+  }
+  
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  
