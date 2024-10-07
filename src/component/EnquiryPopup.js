@@ -61,11 +61,10 @@ const PopUp = (props) => {
                 return 1
             }
 
-            console.log(formData)
             
 
-            await axios.post('http://localhost:5050/api/v1/packages/sendmail', formData);
-            // await axios.post('https://privatejetcharters-server-ttz1.onrender.com/api/admin/add', formData);
+            await axios.post('https://packages-aq69.onrender.com/api/v1/packages/sendmail', formData);
+          
             setTemp(false)
             setFormData({
                 name: '',

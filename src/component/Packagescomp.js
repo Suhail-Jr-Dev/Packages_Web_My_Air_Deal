@@ -19,21 +19,17 @@ function Packagescomp({ temp, setTemp }) {
 
     // Function to filter AllPlace by key
     const filterByKey = (key) => {
-        // console.log(key)
         return AllPlace.map(placeObj => placeObj[key]).filter(Boolean);
     };
 
     const flightData = location.state;
-    console.log(flightData)
     useEffect(() => {
         if (flightData) {
             setGetPlace(flightData);
             const response = filterByKey(flightData.toLowerCase());
             setGetAllData(response);
-            // console.log(response)
-            // console.log(flightData)
+
         }
-        // console.log('hai')
     }, [location.state]);
 
 
@@ -69,14 +65,13 @@ function Packagescomp({ temp, setTemp }) {
             email: email,
         };
 
-        // You can now send the formData as a payload to your API
-        console.log('Form Data:', formData);
+
 
         try {
 
             let temp = async () => {
-                await axios.post('http://localhost:5050/api/v1/packages/sendmail', formData);
-                // await axios.post('https://privatejetcharters-server-ttz1.onrender.com/api/admin/addenquiry', formData);
+                await axios.post('https://packages-aq69.onrender.com/api/v1/packages/sendmail', formData);
+         
                 // setDownloadBrochure(!downloadBrochure)
                 setFirstName('')
                 setEmail('')
@@ -90,7 +85,7 @@ function Packagescomp({ temp, setTemp }) {
         }
         catch (error) {
             message.error('Enquiry not Send')
-            console.log(error)
+         
         }
 
 

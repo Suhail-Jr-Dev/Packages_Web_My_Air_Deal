@@ -40,7 +40,7 @@ function BillingPage({ temp, setTemp }) {
         }
     }, [getAllData, flightData]);
 
-    console.log(getBillingData); // -1 because array starts from 0 but our array id starts from 1
+
 
 
 
@@ -74,14 +74,11 @@ function BillingPage({ temp, setTemp }) {
             email: email,
         };
 
-        // You can now send the formData as a payload to your API
-        console.log('Form Data:', formData);
 
         try {
 
-            let temp = async () => {
-                await axios.post('http://localhost:5050/api/v1/packages/sendmail', formData);
-                // await axios.post('https://privatejetcharters-server-ttz1.onrender.com/api/admin/addenquiry', formData);
+            let sendMail = async () => {
+                await axios.post('https://packages-aq69.onrender.com/api/v1/packages/sendmail ', formData);
                 setDownloadBrochure(!downloadBrochure)
                 setFirstName('')
                 setEmail('')
@@ -90,12 +87,11 @@ function BillingPage({ temp, setTemp }) {
                 setDepartureCity('')
                 message.success('Enquiry Send')
             }
-            temp()
+            sendMail()
 
         }
         catch (error) {
-            message.error('Enquiry not Send')
-            console.log(error)
+            message?.error('Enquiry not Send')
         }
 
 

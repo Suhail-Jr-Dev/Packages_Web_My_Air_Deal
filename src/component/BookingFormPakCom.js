@@ -35,7 +35,7 @@ function BookingFormPakCom() {
         };
 
         try {
-            await axios.post('http://localhost:5050/api/v1/packages/sendmail', formData);
+            await axios.post('https://packages-aq69.onrender.com/api/v1/packages/sendmail ', formData);
             setFirstName('');
             setPhone('');
             setDepartureCity('');
@@ -44,8 +44,6 @@ function BookingFormPakCom() {
             setStartDate(null);
             message.success('Send Enquiry')
         } catch (error) {
-            console.error(error);
-            // alert('Failed to send enquiry');
             message.error('Failed to Send Enquiry')
         }
     };

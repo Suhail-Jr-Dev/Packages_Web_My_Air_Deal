@@ -7,7 +7,6 @@ import flightfront from '../assets/CarouselImg/carplace1.jpg'
 
 function PageBanner({ data , image }) {
 
-    console.log(data)
 
     return (
         <div
