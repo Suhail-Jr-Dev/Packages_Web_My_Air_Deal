@@ -16,6 +16,7 @@ function BillingPage({ temp, setTemp }) {
     const [getPlace, setGetPlace] = useState('');
     const [getAllData, setGetAllData] = useState([]);
     const [getBillingData, setGetBillingData] = useState(null);
+    const [downloadBrochure, setDownloadBrochure] = useState(false)
 
     // Function to filter AllPlace by key
     const filterByKey = (key) => {
@@ -79,6 +80,7 @@ function BillingPage({ temp, setTemp }) {
             let temp = async () => {
                 await axios.post('http://localhost:5050/api/v1/packages/sendmail', formData);
                 // await axios.post('https://privatejetcharters-server-ttz1.onrender.com/api/admin/addenquiry', formData);
+                setDownloadBrochure(!downloadBrochure)
                 setFirstName('')
                 setEmail('')
                 setPhone('')
@@ -243,8 +245,16 @@ function BillingPage({ temp, setTemp }) {
                             </div>
 
                             <div className='w-[50%]'>
-                                <button type="submit" className="text-white w-[80%] bg-brandCol hover:bg-opacity-90 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                                <button type="submit" className={`text-white ${downloadBrochure ? 'hidden' : 'flex'} w-[80%] bg-brandCol hover:bg-opacity-90 font-medium rounded-lg text-sm px-5 py-2.5 items-center justify-center`} >
                                     Submit
+                                </button>
+                                <button type="submit" className={`text-white ${downloadBrochure ? 'flex' : 'hidden'} items-center justify-center w-[90%] bg-brandCol hover:bg-opacity-90 font-medium rounded-lg text-sm px-5 py-2.5`} onClick={() => { setDownloadBrochure(!downloadBrochure) }}>
+                                    <a
+                                        href="/broucher.pdf"
+                                        download="broucher.pdf"
+                                    >
+                                        Download Brochure
+                                    </a>
                                 </button>
                             </div>
 
@@ -254,8 +264,6 @@ function BillingPage({ temp, setTemp }) {
                     </div>
                 </div>
             </div>
-
-
         </div>
     );
 }
