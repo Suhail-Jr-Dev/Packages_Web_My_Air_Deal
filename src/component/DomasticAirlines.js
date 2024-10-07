@@ -85,6 +85,7 @@ function DomasticAirlines() {
                                         }}
                                         className='relative w-full h-full bg-no-repeat rounded-lg overflow-hidden z-20'
                                     >
+                                        
                                         <div className="p-4 absolute bottom-0 text-center w-full bg-gradient-to-t from-black to-transparent text-white">
                                             <div className="w-[100%] flex items-center justify-center">
                                                 <h2 className="w-[80%] border-b-[0.1px] border-b-white text-[1.5rem] py-4 font-bold">

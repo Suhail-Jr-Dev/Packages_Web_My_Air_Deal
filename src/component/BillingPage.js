@@ -8,6 +8,8 @@ import AllPlace from '../APIs/CombinationHome/AllPlace';
 import EnquiryPopUp from './EnquiryPopup';
 import axios from 'axios'
 import { message } from 'antd';
+import BookingForm from './BookingFormPakCom';
+
 
 
 function BillingPage({ temp, setTemp }) {
@@ -101,6 +103,10 @@ function BillingPage({ temp, setTemp }) {
     };
 
 
+    let LocationObject = useLocation()
+    let LocationPlace = LocationObject?.state?.place;
+
+
 
 
 
@@ -139,7 +145,12 @@ function BillingPage({ temp, setTemp }) {
                     {/* About the trip section */}
                     <div className="flex flex-col w-full md:w-[60%] px-6 py-4">
                         <h1 className="text-2xl font-bold text-gray-800">About the trip</h1>
-                        <p className="mt-2 text-gray-600">{getBillingData?.description}</p>
+                        <p className="mt-2 text-gray-600">{getBillingData?.description?.split('\n').map((line, index) => (
+                            <React.Fragment key={index}>
+                                {line}
+                                <br />
+                            </React.Fragment>
+                        ))}</p>
 
                         {/* Uncomment this section if needed */}
                         {/* <div className="mt-4 flex items-start gap-5">
@@ -163,7 +174,7 @@ function BillingPage({ temp, setTemp }) {
                                 <p className="text-gray-700">Starting from</p>
                                 <p className="text-2xl font-semibold">₹ {getBillingData?.price} <sup>*</sup></p>
                             </div>
-                            <div className="flex flex-col gap-2 mt-4">
+                            {/* <div className="flex flex-col gap-2 mt-4">
                                 <a
                                     href="/broucher.pdf"
                                     download="broucher.pdf"
@@ -172,13 +183,13 @@ function BillingPage({ temp, setTemp }) {
                                     Download Brochure
                                 </a>
                                 <a
-                                    href="/flyer.jpg"
-                                    download="flyer.jpg"
+                                    href={`/Flyers/${LocationPlace}.jpg`}
+                                    download={`${LocationPlace}.jpg`}
                                     className="text-sm underline text-blue-600 hover:text-blue-500 transition-colors duration-300"
                                 >
                                     Download Flyer
                                 </a>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
@@ -245,20 +256,21 @@ function BillingPage({ temp, setTemp }) {
                             </div>
 
                             <div className='w-[50%]'>
-                                <button type="submit" className={`text-white ${downloadBrochure ? 'hidden' : 'flex'} w-[80%] bg-brandCol hover:bg-opacity-90 font-medium rounded-lg text-sm px-5 py-2.5 items-center justify-center`} >
+                                <button type="submit" className={`text-white flex w-[80%] bg-brandCol hover:bg-opacity-90 font-medium rounded-lg text-sm px-5 py-2.5 items-center justify-center`} >
                                     Submit
                                 </button>
-                                <button type="submit" className={`text-white ${downloadBrochure ? 'flex' : 'hidden'} items-center justify-center w-[90%] bg-brandCol hover:bg-opacity-90 font-medium rounded-lg text-sm px-5 py-2.5`} onClick={() => { setDownloadBrochure(!downloadBrochure) }}>
+                                {/* <button type="submit" className={`text-white ${downloadBrochure ? 'hidden' : 'flex'} w-[80%] bg-brandCol hover:bg-opacity-90 font-medium rounded-lg text-sm px-5 py-2.5 items-center justify-center`} >
+                                    Submit
+                                </button> */}
+                                {/* <button type="submit" className={`text-white ${downloadBrochure ? 'flex' : 'hidden'} items-center justify-center w-[90%] bg-brandCol hover:bg-opacity-90 font-medium rounded-lg text-sm px-5 py-2.5`} onClick={() => { setDownloadBrochure(!downloadBrochure) }}>
                                     <a
                                         href="/broucher.pdf"
                                         download="broucher.pdf"
                                     >
                                         Download Brochure
                                     </a>
-                                </button>
+                                </button> */}
                             </div>
-
-
 
                         </form>
                     </div>

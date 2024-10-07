@@ -6,7 +6,7 @@ import billingimg3 from '../assets/BillingImg/billingimg3.jpeg'
 
 const ImageGrid = () => {
     return (
-        <div className="max-w-xl mx-auto p-5"> {/* Slightly larger width */}
+        <div className="max-w-xl mx-auto"> {/* Slightly larger width */}
             <div className="grid grid-cols-2 grid-rows-2 gap-4 h-[52vh] w-full">
                 {/* First image taking up 2 rows */}
                 <div className="row-span-2">

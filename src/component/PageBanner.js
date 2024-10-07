@@ -7,6 +7,8 @@ import flightfront from '../assets/CarouselImg/carplace1.jpg'
 
 function PageBanner({ data , image }) {
 
+    console.log(data)
+
     return (
         <div
             className=" h-[60vh]  bg-cover bg-center bg-no-repeat"

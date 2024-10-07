@@ -1,7 +1,7 @@
 //Demostic Section
 import keralaimg1 from '../../assets/APIsImg/DomasticHome/kerala2.jpeg'
 import keralaimg2 from '../../assets/APIsImg/DomasticHome/keralaimg2.jpeg'
-import keralabanner from '../../assets/APIsImg/DomasticHome/keralahome.jpeg'
+import keralabanner from '../../assets/APIsImg/DomasticHome/kerala/keralabanner.jpeg'
 
 
 import shimlaimg1 from '../../assets/APIsImg/DomasticHome/shimla.jpeg'
@@ -488,7 +488,7 @@ Enroute visit Bylakuppe - largest Tibetan settlement in South India famous for t
                 id: 2,
                 img: maaldives2,
                 banner: maaldives2,
-                description: `Day 1 : Welcome to Maldives - Indian Oceans most sought- after beach escape, an archipelago of 1, 190 coral islands south west of Sri Lanka.
+                description: `Day 1 : Welcome to Maldives - Indian Oceans most sought- after beach escape, an archipelago of 1, 190 coral islands south west of Sri Lanka. 
                 Day 2 - 3 : After an appetizing breakfast, you are free to relax on the beach or try some water activities like snorkelling, scuba diving, windsurfing, canoeing etc (at extra price).
                 Day 4 : Enjoy a hearty breakfast and check-out from the hotel/resort as you embark on your journey back home.`,
                 highlight: [

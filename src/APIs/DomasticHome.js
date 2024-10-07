@@ -1,9 +1,9 @@
 import keralahome from '../assets/APIsImg/DomasticHome/kerala/kerala.jpg';
-import shirdiImage from '../assets/APIsImg/DomasticHome/Shirdi3.jpeg'; // Add appropriate images
+import shirdiImage from '../assets/APIsImg/DomasticHome/shridi/shridi.jpg';
 import goaImage from '../assets/APIsImg/DomasticHome/Goahome.jpeg';
 import shimlaImage from '../assets/APIsImg/DomasticHome/shimla/shimla.jpeg';
-import mysoreImage from '../assets/APIsImg/DomasticHome/mysorehome.jpeg';
-import ootyImage from '../assets/APIsImg/DomasticHome/keralahome.jpeg';
+import mysoreImage from '../assets/APIsImg/DomasticHome/mysore/mysore.jpeg';
+import goa from '../assets/APIsImg/DomasticHome/goa/goa.jpeg';
 
 const DomesticHome = [
     {
@@ -21,6 +21,10 @@ const DomesticHome = [
     {
         img: mysoreImage,
         place: 'Mysore'
+    },
+    {
+        img: goa,
+        place: 'Goa'
     },
 
 ];

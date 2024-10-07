@@ -1,12 +1,12 @@
-import dubaiImg from '../assets/APIsImg/InternationalHome/dubai1.webp';
-import singaporeImg from '../assets/APIsImg/InternationalHome/singapor.jpeg';
-import malaysiaImg from '../assets/APIsImg/InternationalHome/malsiya.jpeg';
-import baliImg from '../assets/APIsImg/InternationalHome/bali.jpeg';
-import thailandImg from '../assets/APIsImg/InternationalHome/tailand.jpeg';
+import dubaiImg from '../assets/APIsImg/InternationalHome/dubai/dubai.jpg';
+import singaporeImg from '../assets/APIsImg/InternationalHome/singapore/singapore.jpeg';
+import malaysiaImg from '../assets/APIsImg/InternationalHome/malaysia/malaysia.jpeg';
+import baliImg from '../assets/APIsImg/InternationalHome/bali/bali.jpg';
+import thailandImg from '../assets/APIsImg/InternationalHome/thailand/thailand.jpeg';
 import azerbaijanImg from '../assets/APIsImg/InternationalHome/dubai1.webp';
-import maldivesImg from '../assets/APIsImg/InternationalHome/maaldives.jpeg';
-import viatnam from '../assets/APIsImg/InternationalHome/viatnam.jpeg';
-import andamanImg from '../assets/APIsImg/InternationalHome/andaman.jpeg';
+import maldivesImg from '../assets/APIsImg/InternationalHome/maldives/maldives.jpg';
+import viatnam from '../assets/APIsImg/InternationalHome/viatnam/viatnam.jpg';
+import andamanImg from '../assets/APIsImg/InternationalHome/andaman/andaman.jpg';
 
 const InternationalHome = [
     {
@@ -45,7 +45,7 @@ const InternationalHome = [
         img: andamanImg,
         place: 'Andaman'
     }
-    
+
 ];
 
 export default InternationalHome;
