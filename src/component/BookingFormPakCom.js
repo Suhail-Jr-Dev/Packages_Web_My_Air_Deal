@@ -82,7 +82,7 @@ function BookingFormPakCom() {
                         onChange={(date) => setStartDate(date)}
                         minDate={new Date()} // Disable previous dates
                         dateFormat="dd-MM-yyyy" // Format as dd/mm/yyyy
-                        className="w-full py-2.5 px-0 text-sm text-gray-900 bg-transparent border-b-2 border-gray-300 focus:outline-none focus:ring-0 focus:border-blue-600"
+                        className="w-full py-2.5 px-0 text-sm text-gray-900 bg-transparent border-b-2 border-gray-300 focus:outline-none  z-50  focus:ring-0 focus:border-blue-600"
                         placeholderText="Departure Date"
                         required
                     />

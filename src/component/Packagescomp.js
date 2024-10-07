@@ -120,7 +120,7 @@ function Packagescomp({ temp, setTemp }) {
                                             <h1 className='text-brandCol'>{
                                                 e.duration.slice(0, 20) + '...'
                                             }</h1>
-                                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                                            <p class="mb-3 font-normal h-[4.7rem] text-gray-700 dark:text-gray-400">
                                                 {
                                                     e.description.slice(0, 100) + '...'
                                                 }
