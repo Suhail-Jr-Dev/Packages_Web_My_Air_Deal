@@ -15,26 +15,23 @@ function NavBar({ setTemp }) {
         <div id='top' className='bg-brandCol z-50 fixed top-0 w-full flex justify-between px-10 items-center p-5'>
             <div className='cursor-pointer'>
                 <Link to={'/'}>
-                    <img src={logo} alt="" className='w-[6rem] md:w-[10rem]' />
+                    <img src={logo} alt="MyAirDeal" className='w-[6rem] md:w-[10rem]' />
                 </Link>
             </div>
 
             <div className='hidden md:flex gap-4'>
                 <Link to={'https://myairdeal.com/'} target='_blank' >
                     <button className='flex hover:scale-105 bg-hoverColor text-[1.1rem] cursor-pointer p-1 px-3 rounded-full  text-white items-center'>
-                        {/* <img src={hedderFlight} alt="" className='w-[1.4rem] px-1' /> */}
                         Flights
                     </button>
                 </Link>
                 <Link to={'https://chartersdeployrepo.onrender.com/'} target='_blank'>
                     <button className='flex cursor-pointer bg-hoverColor text-[1.1rem] hover:scale-105 p-1 px-4 rounded-full text-white items-center '>
-                        {/* <img src={jet} alt="" className='w-[1.4rem] text-hoverColor px-1' /> */}
                         Jets
                     </button>
                 </Link>
                 <Link to={'https://chartersdeployrepo.onrender.com/'} target='_blank' >
                     <button className='flex cursor-pointer bg-hoverColor text-[1.1rem] hover:scale-105 p-1 px-2 rounded-full text-white items-center'>
-                        {/* <img src={chater} alt="" className='w-[1.7rem] px-1' /> */}
                         Charters
                     </button>
                 </Link>
@@ -78,21 +75,21 @@ function NavBar({ setTemp }) {
             >
                 <Link to={'https://myairdeal.com/'}>
                     <button className='flex text-[0.9rem]  cursor-pointer text-white items-center w-[6rem]' onClick={() => setMenuWindow(!menuWindow)}>
-                        <img src={hedderFlight} alt="" className='w-[0.6rem] mx-2 ' />
+
                         Flights
                     </button>
                 </Link>
 
                 <Link to={'https://chartersdeployrepo.onrender.com/'}>
                     <button className='flex text-[0.9rem] cursor-pointer text-white items-center w-[6rem]' onClick={() => setMenuWindow(!menuWindow)}>
-                        <img src={hedderFlight} alt="" className='w-[0.6rem] mx-2 ' />
+
                         Jets
                     </button>
                 </Link>
 
                 <Link to={'https://chartersdeployrepo.onrender.com/'}>
                     <button className='flex text-[0.9rem] cursor-pointer text-white items-center w-[6rem]' onClick={() => setMenuWindow(!menuWindow)}>
-                        <img src={hedderFlight} alt="" className='w-[0.6rem] mx-2 ' />
+
                         Charters
                     </button>
                 </Link>

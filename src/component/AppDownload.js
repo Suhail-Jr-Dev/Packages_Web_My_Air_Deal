@@ -17,7 +17,7 @@ function AppDownload() {
                 <div className='flex flex-col justify-center p-5 md:p-10 gap-5 w-full md:w-1/2'>
                     <div className='flex items-center gap-4 text-brandCol'>
                         <div>
-                            <img src={giftlogo} alt="" className='w-[3rem] md:mb-10' />
+                            <img src={giftlogo} alt="logo" className='w-[3rem] md:mb-10' />
                         </div>
                         <div>
                             <h1 className='text-[1.2rem] md:text-[1.5rem] font-bold'>Download App Now</h1>
@@ -38,11 +38,11 @@ function AppDownload() {
 
                 <div className='flex flex-row flex-wrap md:flex-row items-center justify-center gap-5 p-5 w-full md:w-1/2'>
                     <div className='flex flex-row flex-wrap justify-center md:flex-col gap-3 items-center'>
-                        <img src={android} alt="" className='w-[10rem] md:w-[13rem]' />
-                        <img src={apple} alt="" className='w-[10rem] md:w-[13rem]' />
+                        <img src={android} alt="android device" className='w-[10rem] md:w-[13rem]' />
+                        <img src={apple} alt="apple device" className='w-[10rem] md:w-[13rem]' />
                     </div>
                     <div>
-                        <img src={qr} alt="" className='w-[10rem] md:w-[12rem]' />
+                        <img src={qr} alt="QR Code" className='w-[10rem] md:w-[12rem]' />
                     </div>
                 </div>
             </div>

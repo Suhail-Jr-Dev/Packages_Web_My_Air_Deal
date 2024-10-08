@@ -110,7 +110,7 @@ function Packagescomp({ temp, setTemp }) {
 
                                 <div class="max-w-sm bg-white h-[30rem] border overflow-hidden border-gray-200 rounded-lg shadow">
                                     <a href="#">
-                                        <img class="rounded-t-lg" src={e?.img} alt="" className='w-[100%] h-[13rem]' />
+                                        <img class="rounded-t-lg" src={e?.img} alt="Packages" className='w-[100%] h-[13rem]' />
                                     </a>
                                     <div class="p-5">
                                         <div className='py-5'>

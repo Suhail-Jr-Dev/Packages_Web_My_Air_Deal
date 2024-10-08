@@ -3,7 +3,7 @@ import singaporeImg from '../assets/APIsImg/InternationalHome/singapore/singapor
 import malaysiaImg from '../assets/APIsImg/InternationalHome/malaysia/malaysia.jpeg';
 import baliImg from '../assets/APIsImg/InternationalHome/bali/bali.jpg';
 import thailandImg from '../assets/APIsImg/InternationalHome/thailand/thailand.jpeg';
-import azerbaijanImg from '../assets/APIsImg/InternationalHome/dubai1.webp';
+import azerbaijanImg from '../assets/APIsImg/InternationalHome/azerbaijan/Azerbaijan.jpg';
 import maldivesImg from '../assets/APIsImg/InternationalHome/maldives/maldives.jpg';
 import viatnam from '../assets/APIsImg/InternationalHome/viatnam/viatnam.jpg';
 import andamanImg from '../assets/APIsImg/InternationalHome/andaman/andaman.jpg';

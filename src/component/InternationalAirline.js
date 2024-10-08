@@ -38,8 +38,8 @@ function InternationalAirline() {
   return (
     <div className="h-auto flex items-center pt-10 flex-col">
       <div className="font-semibold flex justify-between text-[1.2rem] w-[95%]">
-        <h1 className="md:text-[1.5rem] text-brandCol font-semibold text-[1.3rem] py-5">
-          International Packages
+        <h1 className="text-xl text-brandCol font-semibold  py-5">
+          Affordable Luxury International Packages – Dream Destinations Await
         </h1>
         <div className='w-[5rem] gap-2 flex items-center justify-center'>
           {/* Left Button */}
@@ -47,13 +47,13 @@ function InternationalAirline() {
             onClick={scrollLeft}
             className=" bg-gray-100 bg-opacity-90 text-white w-[2rem] p-2 flex items-center justify-center rounded-l-xl  hover:bg-hoverColor transition"
           >
-            <img src={leftArrow} alt="" />
+            <img src={leftArrow} alt="Go to Left" />
           </button>
           <button
             onClick={scrollRight}
             className=" bg-gray-100 bg-opacity-90 text-white w-[2rem] p-2 flex items-center justify-center rounded-r-xl  hover:bg-hoverColor transition"
           >
-            <img src={rightArrow} alt="" />
+            <img src={rightArrow} alt="Go to Right" />
           </button>
         </div>
       </div>

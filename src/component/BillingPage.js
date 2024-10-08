@@ -103,8 +103,19 @@ function BillingPage({ temp, setTemp }) {
     let LocationPlace = LocationObject?.state?.place;
 
 
+    function trimAllSpaces(str) {
+        // Remove leading and trailing spaces
+        str = str.trim();
+
+        // Replace multiple spaces between words with a single space
+        str = str.replace(/\s+/g, '');
+
+        return str;
+    }
 
 
+    console.log(getBillingData?.place?.toLowerCase())
+    // message.error(`/Flyers/${LocationPlace}${getBillingData?.url || ''}`)
 
     return (
         <div className=" bg-gray-100 pb-10">
@@ -119,7 +130,7 @@ function BillingPage({ temp, setTemp }) {
             >
                 <div className="flex w-[100%] items-center justify-around text-white text-center p-4 md:p-12">
                     <div>
-                        <h1 className="text-[6vw] md:text-[3vw] font-semibold">{
+                        <h1 className="text-[6vw] md:text-[3vw] 1000:w-[50rem] font-semibold">{
                             getBillingData?.place
                         }</h1>
                         <p className="text-[1rem] md:text-[1.25rem]">{
@@ -170,7 +181,8 @@ function BillingPage({ temp, setTemp }) {
                                 <p className="text-gray-700">Starting from</p>
                                 <p className="text-2xl font-semibold">₹ {getBillingData?.price} <sup>*</sup></p>
                             </div>
-                            {/* <div className="flex flex-col gap-2 mt-4">
+                            <div className="flex flex-col gap-2 mt-4">
+                                {/*
                                 <a
                                     href="/broucher.pdf"
                                     download="broucher.pdf"
@@ -178,14 +190,21 @@ function BillingPage({ temp, setTemp }) {
                                 >
                                     Download Brochure
                                 </a>
+                                */}
+
                                 <a
-                                    href={`/Flyers/${LocationPlace}.jpg`}
-                                    download={`${LocationPlace}.jpg`}
+
+
+                                    // href={`/Flyers/${LocationPlace}/${trimAllSpaces(getBillingData?.place?.toLowerCase() || '')}.png`}
+                                    href={`/Flyers/${LocationPlace}/${getBillingData?.url || ''}`}
+
+
+                                    download={`${(getBillingData?.url || 'NoData.png')}`}
                                     className="text-sm underline text-blue-600 hover:text-blue-500 transition-colors duration-300"
                                 >
                                     Download Flyer
                                 </a>
-                            </div> */}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -211,24 +230,25 @@ function BillingPage({ temp, setTemp }) {
                                 <div className="relative z-0 w-full mb-5 group">
                                     <input type="text" name="name" id="name" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required value={firstName}
                                         onChange={(e) => setFirstName(e.target.value)} />
-                                    <label htmlFor="name" className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0">First name</label>
+                                    <label htmlFor="name" className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0">Name <span className='text-red-600'>*</span></label>
                                 </div>
                                 <div className="relative z-0 w-full mb-5 group">
                                     <input type="tel" name="phone" id="phone" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required value={phone}
                                         onChange={(e) => setPhone(e.target.value)} />
-                                    <label htmlFor="phone" className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0">Phone</label>
+                                    <label htmlFor="phone" className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0">Phone <span className='text-red-600'>*</span>
+                                    </label>
                                 </div>
                             </div>
                             <div className="relative z-0 w-full mb-5 group">
                                 <input type="text" name="departure" id="departure" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required
                                     value={departureCity}
                                     onChange={(e) => setDepartureCity(e.target.value)} />
-                                <label htmlFor="departure" className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0">Departure City</label>
+                                <label htmlFor="departure" className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0">Departure City <span className='text-red-600'>*</span></label>
                             </div>
                             <div className="relative z-0 w-full mb-5 group">
                                 <input type="email" name="email" id="email" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required value={email}
                                     onChange={(e) => setEmail(e.target.value)} />
-                                <label htmlFor="email" className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0">Email</label>
+                                <label htmlFor="email" className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0">Email <span className='text-red-600'>*</span></label>
                             </div>
                             <div className="grid md:grid-cols-2 md:gap-6">
                                 <div className="relative z-0 w-full mb-5 group">
@@ -238,16 +258,14 @@ function BillingPage({ temp, setTemp }) {
                                         minDate={new Date()} // Disable previous dates
                                         dateFormat="dd-MM-yyyy" // Format as dd/mm/yyyy
                                         className="w-full py-2.5 px-0 text-sm text-gray-900 bg-transparent border-b-2 border-gray-300 focus:outline-none focus:ring-0 focus:border-blue-600"
-                                        placeholderText="Departure Date"
+                                        placeholderText="Departure Date *"
                                         required
                                     />
-
-
                                 </div>
                                 <div className="relative z-0 w-full mb-5 group">
                                     <input type="tel" name="passengers" id="passengers" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required value={passengers}
                                         onChange={(e) => setPassengers(e.target.value)} />
-                                    <label htmlFor="passengers" className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0">Passengers</label>
+                                    <label htmlFor="passengers" className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0">Passengers <span className='text-red-600'>*</span></label>
                                 </div>
                             </div>
 

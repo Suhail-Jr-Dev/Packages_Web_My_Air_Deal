@@ -71,7 +71,7 @@ function Fotter() {
       <div className='flex flex-col items-center text-[0.9rem] py-5 justify-center'>
         <div className="flex items-center justify-center">
           <div className="border-t-[2px] border-white w-[10vw] sm:w-[15vw] lg:w-[20vw]"></div>
-          <img src={logo} alt="Logo" className="w-[6rem] sm:w-[8rem] lg:w-[10rem] mx-2 sm:mx-4" />
+          <img src={logo} alt="My Air Deal" className="w-[6rem] sm:w-[8rem] lg:w-[10rem] mx-2 sm:mx-4" />
           <div className="border-t-[2px] border-white w-[10vw] sm:w-[15vw] lg:w-[20vw]"></div>
         </div>
 

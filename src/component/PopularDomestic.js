@@ -7,18 +7,18 @@ import image5 from '../assets/PopularDomasticAirs/image5.svg'
 
 function PopularDomestic() {
     return (
-        <div className='flex items-center flex-col' >
+        <div className='flex items-center mt-[3rem] flex-col' >
 
-            <h1 className=' md:text-[1.5rem] pb-3 w-[95%] text-brandCol font-semibold text-[1.3rem]'>Popular Domestic Airlines</h1>
+            <h1 className=' md:text-xl pb-3 w-[95%] text-brandCol font-semibold text-xl'>Leading Domestic Airlines for Premium, Stress-Free Journeys</h1>
 
 
             <div className='flex items-center w-[100%] justify-center'>
                 <div className='flex justify-evenly flex-wrap py-10 rounded-xl border-[1px] border-black w-[95%]'>
-                    <img src={image1} alt="" />
-                    <img src={image2} alt="" />
-                    <img src={image3} alt="" />
-                    <img src={image4} alt="" />
-                    <img src={image5} alt="" />
+                    <img src={image1} alt="Popular Flight One" className='w-[7rem] cursor-pointer' />
+                    <img src={image2} alt="Popular Flight Two" className='w-[7rem] cursor-pointer' />
+                    <img src={image3} alt="Popular Flight Three" className='w-[7rem] cursor-pointer' />
+                    <img src={image4} alt="Popular Flight Four" className='w-[7rem] cursor-pointer' />
+                    <img src={image5} alt="Popular Flight Five" className='w-[7rem] cursor-pointer' />
                 </div>
             </div>
 

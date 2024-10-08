@@ -3,8 +3,11 @@ import React, { useEffect, useRef, useState } from 'react'
 import axios from 'axios'
 import { message } from 'antd';
 
+import loader from '../assets/loaderimg.gif'
+
 const PopUp = (props) => {
     const { temp, setTemp } = props
+    const [isLoading, setIsLoading] = useState(false)
 
     function formatDate(date) {
         const day = String(date.getDate()).padStart(2, '0');
@@ -61,10 +64,14 @@ const PopUp = (props) => {
                 return 1
             }
 
-            
+            setIsLoading(true)
+
+
 
             await axios.post('https://packages-aq69.onrender.com/api/v1/packages/sendmail', formData);
-          
+
+            setIsLoading(false)
+
             setTemp(false)
             setFormData({
                 name: '',
@@ -77,6 +84,7 @@ const PopUp = (props) => {
             localStorage.clear(); // Clear the local storage upon successful submission
             message.success('Form submission is successful');
         } catch (error) {
+            setIsLoading(false)
             message.error('Form submission was unsuccessful. Please check your email.');
             // setTemp(false)
             // setFormData({
@@ -93,7 +101,9 @@ const PopUp = (props) => {
 
 
     return (
-        <div className="App z-50">
+        <div className="App relative z-50" >
+
+
             {/* Modal Toggle Button */}
             {/* <button
                 onClick={openModal}
@@ -111,6 +121,13 @@ const PopUp = (props) => {
                     aria-hidden="true"
                     className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-black bg-opacity-50"
                 >
+
+
+                    <div className={` absolute z-50 bg-gray-50 ${isLoading ? 'flex bg-opacity-10 backdrop-blur-sm' : 'hidden'} items-center justify-center inset-0`}>
+                        <img src={loader} alt="Loading" className='w-[7rem]' />
+                    </div>
+
+
                     <div className="relative p-4 w-full max-w-md max-h-full">
                         {/* Modal Content */}
                         <div className="relative  rounded-lg shadow bg-white bg-opacity-45 backdrop-blur-lg">

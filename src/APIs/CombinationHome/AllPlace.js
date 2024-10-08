@@ -205,6 +205,7 @@ Enroute visit Bylakuppe - largest Tibetan settlement in South India famous for t
                 place: 'Express Vietnam Tour',
                 duration: '3N Hanoi and 2N Ho Chi Minh City',
                 price: '64,999',
+                url: ''
             },
             {
                 id: 2,
@@ -226,6 +227,7 @@ Enroute visit Bylakuppe - largest Tibetan settlement in South India famous for t
                 place: 'Glimpses of Vietnam',
                 duration: '2N Hanoi , 2N Da Nang and 2N Ho Chi Minh City',
                 price: '83,979',
+                url: '/glimpsesofvietnam.png'
             },
             {
                 id: 3,
@@ -246,6 +248,7 @@ Enroute visit Bylakuppe - largest Tibetan settlement in South India famous for t
                 place: 'Flavor of North and South Vietnam',
                 duration: '2N Hanoi , 1N Halong Bay , 2N Da Nang and 2N Ho Chi Minh City',
                 price: '101,624',
+                url: '/flavorofnorthandsouthvietnam.png'
             },
         ],
         dubai: [
@@ -266,6 +269,7 @@ Enroute visit Bylakuppe - largest Tibetan settlement in South India famous for t
                 place: 'Dubai Jain Tour',
                 duration: '5N Dubai',
                 price: '84,157',
+                url: '/dubaijaintour.png'
             },
             {
                 id: 2,
@@ -286,6 +290,7 @@ Enroute visit Bylakuppe - largest Tibetan settlement in South India famous for t
                 place: 'Unbeatable Dubai',
                 duration: '5N Dubai',
                 price: '28,999',
+                url: '/unbeatabledubai.png'
             },
             {
                 id: 3,
@@ -306,6 +311,7 @@ Enroute visit Bylakuppe - largest Tibetan settlement in South India famous for t
                 place: 'Dubai Extravaganza',
                 duration: '6N Dubai',
                 price: '50,999',
+                url: '/dubaiextravaganza.png'
             },
             {
                 id: 4,
@@ -326,6 +332,7 @@ Enroute visit Bylakuppe - largest Tibetan settlement in South India famous for t
                 place: 'Dubai Extravaganza with Abu Dhabi',
                 duration: '4N Dubai and 2N Abu Dhabi',
                 price: '64,699',
+                url: ''
             },
             {
                 id: 5,
@@ -346,6 +353,7 @@ Enroute visit Bylakuppe - largest Tibetan settlement in South India famous for t
                 place: 'Unbelievable Dubai',
                 duration: '5N Dubai',
                 price: '69,599',
+                url: '/unbelievabledubai.png'
             },
             {
                 id: 6,
@@ -367,6 +375,7 @@ Enroute visit Bylakuppe - largest Tibetan settlement in South India famous for t
                 place: 'Dubai Extravaganza With Lapita',
                 duration: '5N Dubai and 1N Dubai',
                 price: '54,499',
+                url: ''
             },
         ],
         singapore: [
@@ -386,6 +395,7 @@ Enroute visit Bylakuppe - largest Tibetan settlement in South India famous for t
                 place: 'Best of Singapore',
                 duration: '4N Singapore',
                 price: '56,199',
+                url: '/bestofsingapore.png'
             },
             {
                 id: 2,
@@ -406,6 +416,7 @@ Enroute visit Bylakuppe - largest Tibetan settlement in South India famous for t
                 place: 'Asian Extravaganza',
                 duration: '3N Singapore , 3N Kuala Lumpur , 2N Pattaya and 2N Bangkok',
                 price: '144,395',
+                url: '/asianextravaganza.jpg'
             },
         ],
         malaysia: [
@@ -425,6 +436,7 @@ Enroute visit Bylakuppe - largest Tibetan settlement in South India famous for t
                 place: 'Asian Extravaganza',
                 duration: '3N Singapore , 3N Kuala Lumpur , 2N Pattaya and 2N Bangkok',
                 price: '144,446',
+                url: '/asianextravaganza.jpg'
             },
             {
                 id: 2,
@@ -444,6 +456,7 @@ Enroute visit Bylakuppe - largest Tibetan settlement in South India famous for t
                 place: 'Highlights of Malaysia',
                 duration: 'Kuala Lumpur 2N, Genting 1N, Langkawi 2N',
                 price: '24,999',
+                url: ''
             },
             {
                 id: 3,
@@ -463,6 +476,7 @@ Enroute visit Bylakuppe - largest Tibetan settlement in South India famous for t
                 place: 'The Best of Malaysia',
                 duration: 'Langkawi 2N, Penang 1N, Kuala Lumpur 2N, Genting 1N',
                 price: '36,399',
+                url: ''
             },
         ],
         maldives: [
@@ -483,6 +497,7 @@ Enroute visit Bylakuppe - largest Tibetan settlement in South India famous for t
                 place: 'Paradise Island Resort',
                 duration: 'Maldives 4N',
                 price: '52,699',
+                url: ''
             },
             {
                 id: 2,
@@ -503,6 +518,7 @@ Enroute visit Bylakuppe - largest Tibetan settlement in South India famous for t
                 place: 'Sun Island Resort & Spa',
                 duration: 'Maldives 3N',
                 price: '54,299',
+                url: ''
             },
             {
                 id: 3,
@@ -523,6 +539,7 @@ Enroute visit Bylakuppe - largest Tibetan settlement in South India famous for t
                 place: 'Centara Ras Fushi',
                 duration: 'Maldives 4N',
                 price: '78,899',
+                url: ''
             },
         ],
         bali: [
@@ -543,6 +560,7 @@ Enroute visit Bylakuppe - largest Tibetan settlement in South India famous for t
                 place: 'Glimpses of Bali',
                 duration: '6N Bali',
                 price: '66,999',
+                url: '/glimpsesofbali.png'
             },
             {
                 id: 2,
@@ -562,6 +580,7 @@ Enroute visit Bylakuppe - largest Tibetan settlement in South India famous for t
                 place: 'Romantic Bali with Private Pool Villa Stay',
                 duration: '5N Bali and 1N Bali',
                 price: '82,599',
+                url: '/romanticbaliwithprivatepoolvillastay.png'
             },
             {
                 id: 3,
@@ -582,6 +601,7 @@ Enroute visit Bylakuppe - largest Tibetan settlement in South India famous for t
                 place: 'Wonderful Bali with Private Pool Villa',
                 duration: '4N Bali and 2N Bali',
                 price: '65,499',
+                url: '/wonderfulbaliwithprivatepoolvilla.png'
             },
         ],
         thailand: [
@@ -601,6 +621,7 @@ Enroute visit Bylakuppe - largest Tibetan settlement in South India famous for t
                 place: 'Chalo Thailand',
                 duration: '3N Pattaya and 1N Bangkok',
                 price: '37,999',
+                url: '/chalothailand.png'
             },
             {
                 id: 2,
@@ -618,6 +639,7 @@ Enroute visit Bylakuppe - largest Tibetan settlement in South India famous for t
                 place: 'Thailand Special Dhamaka ( Ex- Amd)',
                 duration: '3N Pattaya',
                 price: '27,699',
+                url: ''
             },
             {
                 id: 3,
@@ -637,6 +659,7 @@ Enroute visit Bylakuppe - largest Tibetan settlement in South India famous for t
                 place: 'Asian Extravaganza',
                 duration: '3N Singapore , 3N Kuala Lumpur , 2N Pattaya and 2N Bangkok',
                 price: '144,395',
+                url: '/asianextravaganza.jpg'
             },
         ],
         andaman: [
@@ -655,6 +678,7 @@ Enroute visit Bylakuppe - largest Tibetan settlement in South India famous for t
                 place: 'Island Escape With Complimentary Photoshoot at Radhanagar',
                 duration: '1N Port Blair , 2N Havelock-Island and 1N Port Blair',
                 price: '16,499',
+                url: ''
             },
             {
                 id: 2,
@@ -670,6 +694,7 @@ Enroute visit Bylakuppe - largest Tibetan settlement in South India famous for t
                 place: 'Andaman Island Serenity With Complimentary PhotoShoot at Radhanagar Beach',
                 duration: '1N Port Blair , 2N Havelock-Island , 1N Neil Island and 1N Port Blair',
                 price: '23,999',
+                url: ''
             },
         ],
     }

@@ -18,7 +18,7 @@ function MyAirDealRecom() {
     return (
         <div>
             <div className='flex items-center  flex-col pb-5 justify-center'>
-                <h1 className='font-semibold text-brandCol  text-[1.3rem] w-[95%] '>MyAirDeal Recommendations</h1>
+                <h1 className='font-semibold text-brandCol  text-xl w-[95%] '>Premium MyAirDeal Travel Picks</h1>
                 <div
                     style={{ boxShadow: '0px 0px 3px 0.1px black' }}
                     className='rounded-lg font-medium w-[95%] my-5 text-brandCol bg-white grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 '

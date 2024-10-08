@@ -20,23 +20,14 @@ function LandingPage({ temp, setTemp }) {
             <div className=' absolute z-50 right-0 border-[1px] cursor-pointer mt-2 mr-5 border-hoverColor rounded-lg '>
                 <EnquiryPopUp temp={temp} setTemp={setTemp} />
             </div>
-            {/* <NavBar /> */}
             <HeroSection />
             <Offers />
-            {/* <AppleCardsCarouselDemo /> */}
             <PopularDomestic />
-            {/* <ImageGrid /> */}
             <DomasticAirlines />
             <InternationalAirline />
-            {/* <Test /> */}
             <Carousel />
-
-
-
-            {/* <AppDownload /> */}
             <PopularPack />
             <MyAirDealRecom />
-            {/* <Fotter/> */}
         </div>
     )
 }
