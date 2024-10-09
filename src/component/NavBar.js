@@ -70,30 +70,30 @@ function NavBar({ setTemp }) {
 
             {/* Mobile Menu */}
             <div
-                className={`h-auto w-full left-0 right-0 z-50  bg-brandCol bg-opacity-50 md:hidden backdrop-blur-3xl ${menuWindow ? 'flex' : 'hidden'
+                className={`h-[15rem] w-full left-0 right-0 z-50  bg-brandCol bg-opacity-50 md:hidden backdrop-blur-3xl ${menuWindow ? 'flex' : 'hidden'
                     } flex-col gap-2 py-2 items-center justify-center top-[3.7rem] absolute transition-all duration-700`}
             >
                 <Link to={'https://myairdeal.com/'}>
-                    <button className='flex text-[0.9rem]  cursor-pointer text-white items-center w-[6rem]' onClick={() => setMenuWindow(!menuWindow)}>
+                    <button className='flex text-[1.2rem]  cursor-pointer text-white items-center w-[6rem]' onClick={() => setMenuWindow(!menuWindow)}>
 
                         Flights
                     </button>
                 </Link>
 
                 <Link to={'https://chartersdeployrepo.onrender.com/'}>
-                    <button className='flex text-[0.9rem] cursor-pointer text-white items-center w-[6rem]' onClick={() => setMenuWindow(!menuWindow)}>
+                    <button className='flex text-[1.2rem] cursor-pointer text-white items-center w-[6rem]' onClick={() => setMenuWindow(!menuWindow)}>
 
                         Jets
                     </button>
                 </Link>
 
                 <Link to={'https://chartersdeployrepo.onrender.com/'}>
-                    <button className='flex text-[0.9rem] cursor-pointer text-white items-center w-[6rem]' onClick={() => setMenuWindow(!menuWindow)}>
+                    <button className='flex text-[1.2rem] cursor-pointer text-white items-center w-[6rem]' onClick={() => setMenuWindow(!menuWindow)}>
 
                         Charters
                     </button>
                 </Link>
-                <button className='bg-hoverColor text-white text-[0.9rem] cursor-pointer tracking-[0.1rem] rounded-md w-[8rem]' onClick={() => {
+                <button className='bg-hoverColor text-white text-[1.2rem] cursor-pointer tracking-[0.1rem] rounded-md w-[8rem]' onClick={() => {
                     setTemp(true)
                     setMenuWindow(!menuWindow)
                 }} >
