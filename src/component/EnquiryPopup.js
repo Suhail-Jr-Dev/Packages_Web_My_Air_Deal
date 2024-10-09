@@ -123,7 +123,7 @@ const PopUp = (props) => {
                 >
 
 
-                    <div className={` absolute z-50 bg-gray-50 ${isLoading ? 'flex bg-opacity-10 backdrop-blur-sm' : 'hidden'} items-center justify-center inset-0`}>
+                    <div className={` absolute z-50 bg-gray-50  ${isLoading ? 'flex bg-opacity-10 backdrop-blur-sm' : 'hidden'} flex items-center justify-center inset-0`}>
                         <img src={loader} alt="Loading" className='w-[7rem]' />
                     </div>
 
@@ -133,6 +133,7 @@ const PopUp = (props) => {
                         <div className="relative  rounded-lg shadow bg-white bg-opacity-45 backdrop-blur-lg">
                             {/* Modal Header */}
                             <div className="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+
                                 <h3 className="text-xl font-semibold tracking-[0.1rem] text-gray-900 dark:text-white">
                                     Get An Enquiry
                                 </h3>
@@ -141,7 +142,7 @@ const PopUp = (props) => {
                                         setTemp(false)
                                     }}
                                     type="button"
-                                    className="text-black hover:text-red-700 bg-transparent hover:bg-white  rounded-lg text-sm w-8 h-8 inline-flex justify-center items-center  "
+                                    className="text-black hover:text-red-700 bg-transparent hover:bg-white  rounded-lg text-sm w-8 h-8 inline-flex justify-center items-center"
                                 >
                                     <svg
                                         className="w-3 h-3"

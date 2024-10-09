@@ -45,7 +45,8 @@ function Offers() {
             <div className="container mx-auto w-[95%] bg-gray-100 cursor-pointer rounded-xl px-4 sm:px-6 lg:px-8">
                 {/* <div className="container mx-auto py-8 w-[95%] bg-red-500 cursor-pointer rounded-xl px-4 sm:px-6 lg:px-8"> */}
                 {/* Header Section */}
-                <div className="flex justify-between items-center w-full">
+
+                <div className="flex justify-between  items-center w-full">
                     <h1 className="md:text-xl text-brandCol font-semibold text-xl py-5">
                         Exclusive Deals on Holiday Packages
                     </h1>
@@ -122,14 +123,14 @@ function Offers() {
                                     <div className="flex flex-col">
                                         <p className="text-sm text-sky-400">{obj.title}</p>
                                         <h2 className="text-lg font-semibold text-brandCol mb-2">
-                                           {
-                                            obj.discount
-                                           }
+                                            {
+                                                obj.discount
+                                            }
                                         </h2>
                                         <p className="text-sm text-gray-700">
-                                           {
-                                            obj.details
-                                           }
+                                            {
+                                                obj.details
+                                            }
                                         </p>
                                         <span className="text-xs text-gray-400 mt-2">T&C's APPLY</span>
                                     </div>

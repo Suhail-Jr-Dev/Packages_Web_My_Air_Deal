@@ -13,7 +13,7 @@ function PopularDomestic() {
 
 
             <div className='flex items-center w-[100%] justify-center'>
-                <div className='flex justify-evenly flex-wrap py-10 rounded-xl border-[1px] border-black w-[95%]'>
+                <div className='flex gap-6 justify-evenly flex-wrap py-10 md:rounded-xl md:border-[1px] md:border-black w-[95%]'>
                     <img src={image1} alt="Popular Flight One" className='w-[7rem] cursor-pointer' />
                     <img src={image2} alt="Popular Flight Two" className='w-[7rem] cursor-pointer' />
                     <img src={image3} alt="Popular Flight Three" className='w-[7rem] cursor-pointer' />
