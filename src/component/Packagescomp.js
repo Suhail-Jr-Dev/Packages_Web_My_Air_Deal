@@ -8,6 +8,9 @@ import axios from 'axios';
 import { DatePicker, message } from 'antd';
 import BookingFormPakCom from './BookingFormPakCom';
 
+import { Helmet } from 'react-helmet'
+import SEOPlace from '../SEO/SEOPlace';
+
 import { FaArrowRight } from "react-icons/fa6";
 
 import ImageGrid from '../component/ImageGrid'
@@ -16,6 +19,7 @@ function Packagescomp({ temp, setTemp }) {
     const location = useLocation();
     const [getPlace, setGetPlace] = useState('');
     const [getAllData, setGetAllData] = useState([]);
+    const [getSeo, setGetSeo] = useState();
 
     // Function to filter AllPlace by key
     const filterByKey = (key) => {
@@ -24,6 +28,7 @@ function Packagescomp({ temp, setTemp }) {
 
     const flightData = location.state;
     useEffect(() => {
+        setGetSeo(SEOPlace[0][flightData.toLowerCase()])
         if (flightData) {
             setGetPlace(flightData);
             const response = filterByKey(flightData.toLowerCase());
@@ -33,67 +38,16 @@ function Packagescomp({ temp, setTemp }) {
     }, [location.state]);
 
 
-    // Form Section Starts here 
 
-
-    // Set up state for form fields
-    const [firstName, setFirstName] = useState('');
-    const [phone, setPhone] = useState('');
-    const [passengers, setPassengers] = useState('');
-    const [departureCity, setDepartureCity] = useState('');
-    const [startDate, setStartDate] = useState(null);
-    const [email, setEmail] = useState('');
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-
-        const formattedDate = startDate
-            ? startDate.toLocaleDateString('en-GB', {
-                day: '2-digit',
-                month: '2-digit',
-                year: 'numeric',
-            }).replace(/\//g, '-') // Replacing slashes with dashes
-            : '';
-
-        // Create a payload object with form data
-        const formData = {
-            name: firstName,
-            phone: phone,
-            passengers: passengers,
-            departure: departureCity,
-            date: formattedDate,
-            email: email,
-        };
-
-
-
-        try {
-
-            let temp = async () => {
-                await axios.post('https://packages-aq69.onrender.com/api/v1/packages/sendmail', formData);
-         
-                // setDownloadBrochure(!downloadBrochure)
-                setFirstName('')
-                setEmail('')
-                setPhone('')
-                setPassengers('')
-                setDepartureCity('')
-                message.success('Enquiry Send')
-            }
-            temp()
-
-        }
-        catch (error) {
-            message.error('Enquiry not Send')
-         
-        }
-
-
-
-    };
 
     return (
-        <div>
+        <div id='xyzData'>
+
+            <Helmet>
+                <title>{getSeo?.title}</title>
+                <meta name="description" content={getSeo?.description} />
+            </Helmet>
+
             <div className=' absolute z-50 right-0 border-[1px] cursor-pointer mt-2 mr-5 border-hoverColor rounded-lg '>
                 <EnquiryPopUp temp={temp} setTemp={setTemp} />
             </div>

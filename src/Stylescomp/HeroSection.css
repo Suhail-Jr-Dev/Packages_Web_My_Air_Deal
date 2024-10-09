@@ -1,3 +1,43 @@
+/* Mobile Portrait (heroBannerMB.png for vertical mobile) */
+@media (max-width: 760px) and (orientation: portrait) {
+    .heroSection {
+        background-image: 
+            linear-gradient(rgba(0, 0, 0, 0), rgba(81, 41, 41, 0)), 
+            url('../assets/heroBannerMB.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-top: 3.5rem;
+    }
+}
+
+/* Mobile Landscape (heroBanner.png for horizontal mobile) */
+@media (max-width: 760px) and (orientation: landscape) {
+    .heroSection {
+        background-image: 
+            linear-gradient(rgba(0, 0, 0, 0), rgba(81, 41, 41, 0)), 
+            url('../assets/heroBanner.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-top: 3.5rem;
+    }
+}
+
+/* iPad, Mac, Desktop, Laptop (heroBanner.png for larger screens) */
+@media (min-width: 761px) {
+    .heroSection {
+        background-image: 
+            linear-gradient(rgba(0, 0, 0, 0), rgba(81, 41, 41, 0)), 
+            url('../assets/heroBanner.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+
+
 @keyframes fade-in {
     0% {
         opacity: 0;

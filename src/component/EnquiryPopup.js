@@ -221,14 +221,14 @@ const PopUp = (props) => {
                                             htmlFor="passengers"
                                             className="flex items-start  mb-2 text-sm font-medium text-black "
                                         >
-                                            Passengers <span className='text-red-600'>*</span>
+                                            Passengers
                                         </label>
                                         <input
                                             type="number"
                                             name="passengers"
                                             id="passengers"
                                             className=" outline-none text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:placeholder-gray-400"
-                                            required
+                                            
                                             onChange={handleChange}
                                             value={formData.passengers}
                                         />
@@ -238,24 +238,21 @@ const PopUp = (props) => {
                                             htmlFor="departure"
                                             className="flex items-start  mb-2 text-sm font-medium text-black "
                                         >
-                                            Departure <span className='text-red-600'>*</span>
+                                            Departure 
                                         </label>
                                         <input
                                             type="text"
                                             name="departure"
                                             id="departure"
                                             className=" outline-none text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:placeholder-gray-400"
-                                            required
+                                         
                                             onChange={handleChange}
                                             value={formData.departure}
                                         />
                                     </div>
-
                                     <button
                                         type="submit"
-                                        className="w-full text-white   focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-hoverColor "
-
-                                    >
+                                        className="w-full text-white focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-hoverColor">
                                         Get A Call
                                     </button>
 
