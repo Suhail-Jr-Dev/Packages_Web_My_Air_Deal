@@ -22,9 +22,10 @@ function PopularPack() {
                                 <img src={element?.img} alt="Place Package Img" className='w-[3rem] h-[3rem] md:w-[3.8vw] md:h-[3vw] rounded-full' />
                             </div>
                             <div className='flex flex-col px-2 justify-center'>
-                                <h1 className='font-semibold text-[1rem] md:text-[1.3rem]'>{element?.place}</h1>
-                                <p className='text-[0.8rem] md:text-[1rem]'>{element?.place} Tour packages, {element?.place} Tourism</p>
-
+                                <h1 className='font-semibold text-[1rem] md:text-[1.3rem]'>
+                                    {element?.place}
+                                </h1>
+                                <p className='text-[0.8rem] md:text-[1rem]'>{element?.place} Tour packages, {element?.place}Tourism</p>
                             </div>
                         </div>
                     ))}
@@ -34,5 +35,4 @@ function PopularPack() {
         </div >
     )
 }
-
 export default PopularPack

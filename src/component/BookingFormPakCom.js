@@ -40,7 +40,10 @@ function BookingFormPakCom() {
 
         try {
             setIsLoading(true)
-            await axios.post('https://packages-aq69.onrender.com/api/v1/packages/sendmail ', formData);
+
+            const enquiryUrl = process.env.REACT_APP_ENQUIRY_URL; // Accessing environment variable
+            await axios.post(enquiryUrl, formData);
+
             setIsLoading(false)
 
             setFirstName('');

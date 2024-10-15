@@ -4,7 +4,6 @@ import AllPlace from '../APIs/CombinationHome/AllPlace';
 import { Link, useLocation } from 'react-router-dom';
 import card from '../assets/APIsImg/DomasticHome/kerala1.jpeg'
 import EnquiryPopUp from './EnquiryPopup';
-import axios from 'axios';
 import { DatePicker, message } from 'antd';
 import BookingFormPakCom from './BookingFormPakCom';
 

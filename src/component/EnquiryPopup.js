@@ -67,8 +67,8 @@ const PopUp = (props) => {
             setIsLoading(true)
 
 
-
-            await axios.post('https://packages-aq69.onrender.com/api/v1/packages/sendmail', formData);
+            const enquiryUrl = process.env.REACT_APP_ENQUIRY_URL; // Accessing environment variable
+            await axios.post(enquiryUrl, formData);
 
             setIsLoading(false)
 
@@ -228,7 +228,7 @@ const PopUp = (props) => {
                                             name="passengers"
                                             id="passengers"
                                             className=" outline-none text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:placeholder-gray-400"
-                                            
+
                                             onChange={handleChange}
                                             value={formData.passengers}
                                         />
@@ -238,14 +238,14 @@ const PopUp = (props) => {
                                             htmlFor="departure"
                                             className="flex items-start  mb-2 text-sm font-medium text-black "
                                         >
-                                            Departure 
+                                            Departure
                                         </label>
                                         <input
                                             type="text"
                                             name="departure"
                                             id="departure"
                                             className=" outline-none text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:placeholder-gray-400"
-                                         
+
                                             onChange={handleChange}
                                             value={formData.departure}
                                         />
