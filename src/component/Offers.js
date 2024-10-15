@@ -69,42 +69,6 @@ function Offers() {
                 </div>
 
                 <div className='flex flex-col'>
-                    {/* <div
-                        ref={carouselRef1}
-                        className="flex overflow-x-auto items-center justify-center gap-7 no-scrollbar py-2 scroll-smooth space-x-4 w-full"
-                    >
-                        {OffersData.map((obj, index) => (
-                            <div
-                                key={index}
-                                className="bg-white rounded-lg transition-transform transform hover:scale-105 w-full sm:w-[22rem] md:w-[28rem] lg:w-[42rem] flex-shrink-0"
-                            >
-                                <div className="flex p-6 items-center">
-                                    <img
-                                        src={obj.img}
-                                        alt="Flight Voucher"
-                                        className="w-24 h-24 object-cover mr-4"
-                                    />
-                                    <div className="flex flex-col">
-                                        <p className="text-sm text-sky-400">{obj.title}</p>
-                                        <h2 className="text-lg font-semibold text-brandCol mb-2">
-                                            {
-                                                obj.discount
-                                            }
-
-                                        </h2>
-                                      
-                                        <p className="text-sm text-gray-700">
-                                            {
-                                                obj.details
-                                            }
-                                        </p>
-                                       
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
-                    </div> */}
-
                     <div
                         ref={carouselRef2}
                         className="flex justify-around overflow-x-auto no-scrollbar py-2 scroll-smooth space-x-4 w-full"

@@ -168,19 +168,7 @@ function BillingPage({ temp, setTemp }) {
                             </React.Fragment>
                         ))}</p>
 
-                        {/* Uncomment this section if needed */}
-                        {/* <div className="mt-4 flex items-start gap-5">
-                             <div className="font-semibold text-gray-800">
-                                    <h1>Meals</h1>
-                                    <h1>Max. Group Size</h1>
-                                    <h1>Guide Languages</h1>
-                                </div>
-                            <div className="text-gray-600">
-                                <p>4 Jain Indian Lunches and 5 Jain Indian Dinners</p>
-                                <p>30</p>
-                                <p>English, Hindi</p>
-                            </div>
-                        </div> */}
+                      
                     </div>
 
                     {/* Pricing and Downloads section */}
@@ -191,15 +179,7 @@ function BillingPage({ temp, setTemp }) {
                                 <p className="text-2xl font-semibold">₹ {getBillingData?.price} <sup>*</sup></p>
                             </div>
                             <div className="flex flex-col gap-2 mt-4">
-                                {/*
-                                <a
-                                    href="/broucher.pdf"
-                                    download="broucher.pdf"
-                                    className="text-sm underline text-blue-600 hover:text-blue-500 transition-colors duration-300"
-                                >
-                                    Download Brochure
-                                </a>
-                                */}
+                                
 
                                 <a
 
@@ -283,17 +263,7 @@ function BillingPage({ temp, setTemp }) {
                                     Submit
                                     {isLoading && <img src={loader} alt="" className='w-[2rem]' />}
                                 </button>
-                                {/* <button type="submit" className={`text-white ${downloadBrochure ? 'hidden' : 'flex'} w-[80%] bg-brandCol hover:bg-opacity-90 font-medium rounded-lg text-sm px-5 py-2.5 items-center justify-center`} >
-                                    Submit
-                                </button> */}
-                                {/* <button type="submit" className={`text-white ${downloadBrochure ? 'flex' : 'hidden'} items-center justify-center w-[90%] bg-brandCol hover:bg-opacity-90 font-medium rounded-lg text-sm px-5 py-2.5`} onClick={() => { setDownloadBrochure(!downloadBrochure) }}>
-                                    <a
-                                        href="/broucher.pdf"
-                                        download="broucher.pdf"
-                                    >
-                                        Download Brochure
-                                    </a>
-                                </button> */}
+                                
                             </div>
 
                         </form>

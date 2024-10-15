@@ -118,29 +118,3 @@ function Packagescomp({ temp, setTemp }) {
 export default Packagescomp;
 
 
-{/* <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
-    <a href="#">
-        <img class="rounded-t-lg" src={card} alt="" />
-    </a>
-    <div class="p-5">
-        <div className='py-5'>
-            <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900">Dubai Jain Tour</h5>
-            <h1 className='text-brandCol'>Dubai 5N</h1>
-            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                This tour is designed for Indian travelers seeking a complete Dubai experience but making sure their specific food requirements (pure veg and jain foo...)
-            </p>
-        </div>
-        <div className='flex items-center justify-between'>
-            <div>
-                <h1 className='text-[0.9rem] text-gray-300'><span className='font-semibold text-black'>₹ 84,080</span> per person</h1>
-                <p className=' text-gray-300 text-[0.9rem]'>Includes Taxes & Fess</p>
-            </div>
-            <a href="#" class="inline-flex items-center py-3 px-2 text-sm font-medium text-center text-white bg-brandCol rounded-lg hover:bg-blue-800 ">
-                View Details
-                <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                </svg>
-            </a>
-        </div>
-    </div>
-</div> */}

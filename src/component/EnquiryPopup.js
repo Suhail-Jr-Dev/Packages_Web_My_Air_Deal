@@ -86,13 +86,6 @@ const PopUp = (props) => {
         } catch (error) {
             setIsLoading(false)
             message.error('Form submission was unsuccessful. Please check your email.');
-            // setTemp(false)
-            // setFormData({
-            //     name: '',
-            //     email: '',
-            //     phone: '',
-            //     type: ''
-            // });
         }
     };
 
@@ -104,14 +97,6 @@ const PopUp = (props) => {
         <div className="App relative z-50" >
 
 
-            {/* Modal Toggle Button */}
-            {/* <button
-                onClick={openModal}
-                className="block text-hoverColor hover:text-white focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center "
-                type="button"
-            >
-                ENQUIRE NOW
-            </button> */}
 
             {/* Main Modal */}
             {temp && (
