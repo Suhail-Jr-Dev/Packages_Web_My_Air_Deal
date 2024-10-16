@@ -47,7 +47,7 @@ function Offers() {
                 {/* Header Section */}
 
                 <div className="flex justify-between  items-center w-full">
-                    <h1 className="md:text-xl text-brandCol font-semibold text-xl py-5">
+                    <h1 className='font-extrabold text-brandCol  text-[1.5rem] py-2 w-[95%] '>
                         Exclusive Deals on Holiday Packages
                     </h1>
                     <div className='flex space-x-2 items-center'>

@@ -24,7 +24,7 @@ function App() {
         <Route path="/billingpage" element={<BillingPage temp={temp} setTemp={setTemp} />} />
 
       </Routes>
-      <Fotter />
+      <Fotter setTemp={setTemp} />
     </Router>
 
 

@@ -9,7 +9,7 @@ function PopularDomestic() {
     return (
         <div className='flex items-center mt-[3rem] flex-col' >
 
-            <h1 className=' md:text-xl pb-3 w-[95%] text-brandCol font-bold text-xl'>Leading Domestic Airlines for Premium, Stress-Free Journeys</h1>
+            <h1 className='font-extrabold  text-brandCol  text-[1.5rem] w-[95%] '>Leading Domestic Airlines for Premium, Stress-Free Journeys</h1>
 
             <div className='flex items-center w-[100%] justify-center'>
                 <div className='flex gap-6 justify-evenly flex-wrap py-10 md:rounded-xl md:border-[1px] md:border-gray-200 w-[95%]'>

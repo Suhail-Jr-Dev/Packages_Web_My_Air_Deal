@@ -13,6 +13,7 @@ import EnquiryPopUp from '../component/EnquiryPopup'
 import Test, { AppleCardsCarouselDemo } from './AppleCardsCarouselDemo'
 import ImageGrid from './ImageGrid'
 import PopularDomestic from './PopularDomestic'
+import VisaCard from '../VisaCard'
 
 function LandingPage({ temp, setTemp }) {
     return (
@@ -26,6 +27,7 @@ function LandingPage({ temp, setTemp }) {
             <DomasticAirlines />
             <InternationalAirline />
             <Carousel />
+            {/* <VisaCard/> */}
             <PopularPack />
             <MyAirDealRecom />
         </div>

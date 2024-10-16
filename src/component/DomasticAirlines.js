@@ -37,10 +37,10 @@ function DomasticAirlines() {
     };
 
     return (
-        <div className="h-auto flex items-center flex-col">
+        <div className="h-auto flex items-center py-5 flex-col">
             <div className="font-semibold flex justify-between text-[1.2rem] w-[95%]">
-                <h1 className="text-xl text-brandCol font-semibold py-5">
-                Affordable Luxury Domestic Packages – Discover Hidden Gems
+                <h1 className='font-extrabold text-brandCol  text-[1.5rem] w-[95%] '>
+                    Affordable Luxury Domestic Packages – Discover Hidden Gems
                 </h1>
                 <div className='w-[5rem] gap-2 flex items-center justify-center'>
                     {/* Left Button */}
@@ -85,7 +85,7 @@ function DomasticAirlines() {
                                         }}
                                         className='relative w-full h-full bg-no-repeat rounded-lg overflow-hidden z-20'
                                     >
-                                        
+
                                         <div className="p-4 absolute bottom-0 text-center w-full bg-gradient-to-t from-black to-transparent text-white">
                                             <div className="w-[100%] flex items-center justify-center">
                                                 <h2 className="w-[80%] border-b-[0.1px] border-b-white text-[1.5rem] py-4 font-bold">

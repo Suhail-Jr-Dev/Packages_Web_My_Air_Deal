@@ -44,12 +44,30 @@ const PopUp = (props) => {
 
     }, [formData]);
 
+    // const handleChange = (event) => {
+    //     setFormData({
+    //         ...formData,
+    //         [event.target.name]: event.target.value,
+    //     });
+    // };
+
     const handleChange = (event) => {
+        const { name, value } = event.target;
+
+        // Ensure phone and passengers fields cannot have negative values
+        if (name === 'phone' || name === 'passengers') {
+            if (value < 0) {
+                message.error('Enter the Phone number or Passengers Correctly')
+                return; // If the value is negative, do not update the state
+            }
+        }
+
         setFormData({
             ...formData,
-            [event.target.name]: event.target.value,
+            [name]: value,
         });
     };
+
 
 
 
@@ -84,8 +102,16 @@ const PopUp = (props) => {
             localStorage.clear(); // Clear the local storage upon successful submission
             message.success('Form submission is successful');
         } catch (error) {
-            setIsLoading(false)
-            message.error('Form submission was unsuccessful. Please check your email.');
+            // Checking if it's a network error
+            if (!error.response) {
+                // Network error
+                message.error('Network error: Please check your internet connection.');
+            } else {
+                // Other error response (like 400 or 500 status codes)
+                message.error('Enquiry failed: ' + error.response?.data?.message || 'Something went wrong. Please try again later.');
+            }
+        } finally {
+            setIsLoading(false);
         }
     };
 
@@ -120,7 +146,7 @@ const PopUp = (props) => {
                             <div className="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
 
                                 <h3 className="text-xl font-semibold tracking-[0.1rem] text-gray-900 dark:text-white">
-                                    Get An Enquiry
+                                    Get Your Quote
                                 </h3>
                                 <button
                                     onClick={() => {
@@ -238,7 +264,7 @@ const PopUp = (props) => {
                                     <button
                                         type="submit"
                                         className="w-full text-white focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-hoverColor">
-                                        Get A Call
+                                        Submit
                                     </button>
 
                                 </form>

@@ -73,21 +73,21 @@ function NavBar({ setTemp }) {
                 className={`h-[15rem] w-full left-0 right-0 z-50  bg-brandCol bg-opacity-50 md:hidden backdrop-blur-3xl ${menuWindow ? 'flex' : 'hidden'
                     } flex-col gap-2 py-2 items-center justify-center top-[3.7rem] absolute transition-all duration-700`}
             >
-                <Link to={'https://myairdeal.com/'}>
+                <Link to={'https://myairdeal.com/'} target='_blank' >
                     <button className='flex text-[1.2rem]  cursor-pointer text-white items-center w-[6rem]' onClick={() => setMenuWindow(!menuWindow)}>
 
                         Flights
                     </button>
                 </Link>
 
-                <Link to={'https://chartersdeployrepo.onrender.com/'}>
+                <Link to={'https://chartersdeployrepo.onrender.com/'} target='_blank' >
                     <button className='flex text-[1.2rem] cursor-pointer text-white items-center w-[6rem]' onClick={() => setMenuWindow(!menuWindow)}>
 
                         Jets
                     </button>
                 </Link>
 
-                <Link to={'https://chartersdeployrepo.onrender.com/'}>
+                <Link to={'https://chartersdeployrepo.onrender.com/'} target='_blank' >
                     <button className='flex text-[1.2rem] cursor-pointer text-white items-center w-[6rem]' onClick={() => setMenuWindow(!menuWindow)}>
 
                         Charters

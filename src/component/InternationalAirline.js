@@ -36,9 +36,9 @@ function InternationalAirline() {
   };
 
   return (
-    <div className="h-auto flex items-center pt-10 flex-col">
+    <div className="h-auto flex items-center flex-col">
       <div className="font-semibold flex justify-between text-[1.2rem] w-[95%]">
-        <h1 className="text-xl text-brandCol font-semibold  py-5">
+        <h1 className='font-extrabold text-brandCol  text-[1.5rem] w-[95%] '>
           Affordable Luxury International Packages – Dream Destinations Await
         </h1>
         <div className='w-[5rem] gap-2 flex items-center justify-center'>

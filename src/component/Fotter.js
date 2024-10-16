@@ -6,11 +6,15 @@ import { SiApplepay, SiPaytm } from "react-icons/si";
 import { FaFacebook, FaInstagram, FaXTwitter } from "react-icons/fa6";
 
 import { TbTransitionTopFilled } from "react-icons/tb";
+import { FaLinkedinIn } from "react-icons/fa";
 
 import logo from '../assets/myairdeallogo.png';
 import { Link } from 'react-router-dom';
 
-function Fotter() {
+function Fotter({ setTemp }) {
+
+  const EmailContent = "https://mail.google.com/mail/?view=cm&fs=1&to=support@bookmyjet.com&su=Inquiry%20About%20Your%20Services&body=Hello%2C%0D%0A%0D%0AI%20am%20interested%20in%20learning%20more%20about%20your%20services.%20Please%20provide%20me%20with%20additional%20information.%0D%0A%0D%0AThank%20you!"
+
   return (
     <div className='bg-brandCol relative text-white py-11 '>
 
@@ -23,24 +27,27 @@ function Fotter() {
 
         <div className='text-[0.9rem] gap-1 flex flex-col'>
           <h1 className='text-[1.2rem] mb-2'>About</h1>
-          <a className='underline' href="#">About MyAirDeal</a>
+          <a className='underline' target='_blank' href="https://myairdeal.com/">About MyAirDeal</a>
           <a className='underline' href="#">News</a>
-          <a className='underline' href="#">Terms & Conditions</a>
-          <a className='underline' href="#">Privacy Policies</a>
+          <a className='underline' href="https://myairdeal.com/terms-and-conditions">Terms & Conditions</a>
+          <a className='underline' href="https://myairdeal.com/privacy-policy">Privacy Policies</a>
         </div>
 
         <div className='text-[0.9rem] gap-1 flex flex-col'>
           <h1 className='text-[1.2rem] mb-2'>Contact Us</h1>
-          <a className='underline' href="#">Help</a>
-          <a className='underline' href="#">Customer Support</a>
+          <a href={EmailContent} target="_blank" className='underline'>Help</a>
+          <a className='underline cursor-pointer' onClick={() => {
+            setTemp(true)
+          }}>Customer Support</a>
+          <a className='underline'>Contact No : 8884466800 </a>
         </div>
 
         <div className='text-[0.9rem] gap-1 flex flex-col'>
           <h1 className='text-[1.2rem] mb-2'>Other Services</h1>
-          <a className='underline' href="#">Flight Booking</a>
-          <a className='underline' href="#">Private Jets</a>
-          <a className='underline' href="#">Charters</a>
-          <a className='underline' href="#">Air Ambulance</a>
+          <a className='underline' href="https://myairdeal.com/" target='_blank'>Flight Booking</a>
+          <a className='underline' href="https://chartersdeployrepo.onrender.com" target='_blank'>Private Jets</a>
+          <a className='underline' href="https://chartersdeployrepo.onrender.com" target='_blank'>Charters</a>
+          <a className='underline' href="https://chartersdeployrepo.onrender.com" target='_blank'>Air Ambulance</a>
         </div>
 
         <div className='flex flex-col gap-5'>
@@ -48,19 +55,25 @@ function Fotter() {
           <div className='flex flex-col gap-3'>
             <p>Payment Services</p>
             <div className='flex gap-3'>
-              <LiaCcVisa className='w-[2rem] h-[2rem] hover:cursor-pointer hover:fill-hoverColor' />
-              <FaCcMastercard className='w-[2rem] h-[2rem] hover:cursor-pointer hover:fill-hoverColor' />
-              <SiApplepay className='w-[2rem] h-[2rem] hover:cursor-pointer hover:fill-hoverColor' />
-              <SiPaytm className='w-[2rem] h-[2rem] hover:cursor-pointer hover:fill-hoverColor' />
+              <LiaCcVisa className='w-[2rem] h-[2rem] ' />
+              <FaCcMastercard className='w-[2rem] h-[2rem] ' />
+              <SiApplepay className='w-[2rem] h-[2rem] ' />
+              <SiPaytm className='w-[2rem] h-[2rem]' />
             </div>
           </div>
           {/* Social Media */}
           <div className='flex flex-col gap-3'>
             <h1>Follow Us</h1>
             <div className='flex gap-3'>
-              <FaFacebook className='w-[1.5rem] h-[1.5rem]  hover:cursor-pointer hover:fill-hoverColor' />
-              <FaInstagram className='w-[1.5rem] h-[1.5rem]  hover:cursor-pointer hover:fill-hoverColor' />
-              <FaXTwitter className='w-[1.5rem] h-[1.5rem]  hover:cursor-pointer hover:fill-hoverColor' />
+              <Link to={'https://www.facebook.com/profile.php?id=61561003964312'} target='_blank'>
+                <FaFacebook className='w-[1.5rem] h-[1.5rem]  hover:cursor-pointer hover:fill-hoverColor' />
+              </Link>
+              <Link to={'https://www.instagram.com/myairdeal/'} target='_blank'>
+                <FaInstagram className='w-[1.5rem] h-[1.5rem]  hover:cursor-pointer hover:fill-hoverColor' />
+              </Link>
+              <Link to={'https://in.linkedin.com/company/my-air-deal'} target='_blank' >
+                <FaLinkedinIn className='w-[1.5rem] h-[1.5rem]  hover:cursor-pointer hover:fill-hoverColor' />
+              </Link>
             </div>
           </div>
         </div>
