@@ -275,9 +275,7 @@ function BillingPage({ temp, setTemp }) {
                                     Submit
                                     {isLoading && <img src={loader} alt="" className='w-[2rem]' />}
                                 </button>
-
                             </div>
-
                         </form>
                     </div>
                 </div>

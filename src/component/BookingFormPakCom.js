@@ -122,7 +122,7 @@ function BookingFormPakCom() {
 
             <div className='w-[50%]'>
 
-                <button type="submit" className={`text-white flex gap-2 w-[80%] bg-brandCol hover:bg-opacity-90 font-medium rounded-lg text-sm px-5 py-2.5 items-center justify-center`} >
+                <button type="submit" className={`text-white flex gap-3 w-[80%] bg-brandCol hover:bg-opacity-90  font-medium rounded-lg text-sm px-5 py-2.5 items-center justify-center`} >
                     Submit
                     {isLoading && <img src={loader} alt="" className='w-[2rem]' />}
                 </button>
