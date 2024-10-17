@@ -19,49 +19,53 @@ function NavBar({ setTemp }) {
                 </Link>
             </div>
 
-            <div className='hidden md:flex gap-4'>
-                <Link to={'https://myairdeal.com/'} target='_blank' >
-                    <button className='flex hover:scale-105 bg-hoverColor text-[1.1rem] cursor-pointer p-1 px-3 rounded-full  text-white items-center'>
-                        Flights
-                    </button>
-                </Link>
-                <Link to={'https://chartersdeployrepo.onrender.com/'} target='_blank'>
-                    <button className='flex cursor-pointer bg-hoverColor text-[1.1rem] hover:scale-105 p-1 px-4 rounded-full text-white items-center '>
-                        Jets
-                    </button>
-                </Link>
-                <Link to={'https://chartersdeployrepo.onrender.com/'} target='_blank' >
-                    <button className='flex cursor-pointer bg-hoverColor text-[1.1rem] hover:scale-105 p-1 px-2 rounded-full text-white items-center'>
-                        Charters
-                    </button>
-                </Link>
-            </div>
 
-            {/* Animated Enquiry Button */}
-            <div
-                className='hidden md:flex w-[8rem] h-[2.5rem] relative rounded-lg overflow-hidden bg-hoverColor'
-                onMouseEnter={() => setEnquiryHover(true)}
-                onMouseLeave={() => setEnquiryHover(false)}
-            >
-                <div className='relative w-full h-full flex  cursor-pointer items-center justify-center overflow-hidden' onClick={() => {
-                    setTemp(true)
-                }}>
-                    {/* Text and image inside button */}
-                    <button
-                        className={`absolute left-0 w-full h-full flex items-cenஃter justify-center text-white tracking-[0.2rem] p-2 transition-transform duration-500 ${enquiryHover ? 'translate-x-full opacity-0' : 'translate-x-0 opacity-100'
-                            }`}
+            <div className='flex gap-4'>
 
-                    >
-                        ENQUIRY
-                    </button>
-                    <img
-                        src={whiteFlight}
-                        alt="White Flight"
-                        className={`absolute w-[2rem] rotate-45 transition-transform duration-500 transform ${enquiryHover ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'
-                            }`}
-                    />
+                <div className='hidden md:flex'>
+                    <Link to={'https://myairdeal.com/'} target='_blank' >
+                        <button className='flex hover:scale-105 bg-hoverColor tracking-[0.1rem]  cursor-pointer p-2 rounded-lg  text-white items-center'>
+                            Book Flights
+                        </button>
+                    </Link>
+
                 </div>
+
+
+                {/* Animated Enquiry Button */}
+                <div
+                    className='hidden md:flex w-[8rem] h-[2.5rem] relative rounded-lg overflow-hidden bg-hoverColor'
+                    onMouseEnter={() => setEnquiryHover(true)}
+                    onMouseLeave={() => setEnquiryHover(false)}
+                >
+
+
+
+
+                    <div className='relative w-full h-full flex  cursor-pointer items-center justify-center overflow-hidden' onClick={() => {
+                        setTemp(true)
+                    }}>
+                        {/* Text and image inside button */}
+                        <button
+                            className={`absolute left-0 w-full h-full flex items-center justify-center text-white tracking-[0.2rem] p-2 transition-transform duration-500 ${enquiryHover ? 'translate-x-full opacity-0' : 'translate-x-0 opacity-100'
+                                }`}
+
+                        >
+                            ENQUIRY
+                        </button>
+                        <img
+                            src={whiteFlight}
+                            alt="White Flight"
+                            className={`absolute w-[2rem] rotate-45 transition-transform duration-500 transform ${enquiryHover ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'
+                                }`}
+                        />
+                    </div>
+                </div>
+
             </div>
+
+
+
 
             {/* Mobile Hamburger Menu */}
             <div className='flex md:hidden' onClick={() => setMenuWindow(!menuWindow)}>
@@ -74,23 +78,9 @@ function NavBar({ setTemp }) {
                     } flex-col gap-2 py-2 items-center justify-center top-[3.7rem] absolute transition-all duration-700`}
             >
                 <Link to={'https://myairdeal.com/'} target='_blank' >
-                    <button className='flex text-[1.2rem]  cursor-pointer text-white items-center w-[6rem]' onClick={() => setMenuWindow(!menuWindow)}>
+                    <button className='flex text-[1.2rem]  cursor-pointer text-white items-center w-[7rem]' onClick={() => setMenuWindow(!menuWindow)}>
 
-                        Flights
-                    </button>
-                </Link>
-
-                <Link to={'https://chartersdeployrepo.onrender.com/'} target='_blank' >
-                    <button className='flex text-[1.2rem] cursor-pointer text-white items-center w-[6rem]' onClick={() => setMenuWindow(!menuWindow)}>
-
-                        Jets
-                    </button>
-                </Link>
-
-                <Link to={'https://chartersdeployrepo.onrender.com/'} target='_blank' >
-                    <button className='flex text-[1.2rem] cursor-pointer text-white items-center w-[6rem]' onClick={() => setMenuWindow(!menuWindow)}>
-
-                        Charters
+                        Book Flights
                     </button>
                 </Link>
                 <button className='bg-hoverColor text-white text-[1.2rem] cursor-pointer tracking-[0.1rem] rounded-md w-[8rem]' onClick={() => {

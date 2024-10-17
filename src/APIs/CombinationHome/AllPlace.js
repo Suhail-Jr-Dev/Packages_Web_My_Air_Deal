@@ -609,7 +609,7 @@ Enroute visit Bylakuppe - largest Tibetan settlement in South India famous for t
                 id: 1,
                 img: taiimg3,
                 banner: tailandhome,
-                description: 'Standard Thailand Package for Budget',
+                description: 'Pattaya is a popular tourist destination located on the eastern coast of Thailand, approximately 150 kilometers (93 miles) southeast of Bangkok. It is known for its vibrant nightlife, beautiful beaches, and a wide range of activities and attractions that cater to various interests.',
                 highlight: [
                     'To and Fro Economy Class Flights (ex DEL)',
                     'Stay in 3 star hotels',

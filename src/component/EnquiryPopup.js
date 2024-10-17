@@ -249,7 +249,7 @@ const PopUp = (props) => {
                                             htmlFor="departure"
                                             className="flex items-start  mb-2 text-sm font-medium text-black "
                                         >
-                                            Departure
+                                            City
                                         </label>
                                         <input
                                             type="text"

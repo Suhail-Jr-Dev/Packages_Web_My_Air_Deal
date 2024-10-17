@@ -3,7 +3,7 @@ import image1 from '../assets/PopularDomasticAirs/image1.png'
 import image2 from '../assets/PopularDomasticAirs/image2.png'
 import image3 from '../assets/PopularDomasticAirs/image3.png'
 import image4 from '../assets/PopularDomasticAirs/image4.png'
-import image5 from '../assets/PopularDomasticAirs/image5.png'
+import image6 from '../assets/PopularDomasticAirs/image6.jpg'
 
 function PopularDomestic() {
     return (
@@ -17,7 +17,7 @@ function PopularDomestic() {
                     <img src={image2} alt="Popular Flight Two" className='w-[7rem] cursor-pointer' />
                     <img src={image3} alt="Popular Flight Three" className='w-[7rem] cursor-pointer' />
                     <img src={image4} alt="Popular Flight Four" className='w-[7rem] cursor-pointer' />
-                    <img src={image5} alt="Popular Flight Five" className='w-[7rem] cursor-pointer' />
+                    <img src={image6} alt="Popular Flight Five" className='w-[7rem] cursor-pointer rounded-xl' />
                 </div>
             </div>
 
