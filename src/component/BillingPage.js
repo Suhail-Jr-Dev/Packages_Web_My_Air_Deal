@@ -56,7 +56,7 @@ function BillingPage({ temp, setTemp }) {
     const [isLoading, setIsLoading] = useState(false)
 
     // Handle form submission
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         const formattedDate = startDate
@@ -84,23 +84,17 @@ function BillingPage({ temp, setTemp }) {
 
 
         try {
-
-            let sendMail = async () => {
-                setIsLoading(true)
-
-                const enquiryUrl = process.env.REACT_APP_ENQUIRY_URL; // Accessing environment variable
-                await axios.post(enquiryUrl, formData);
-
-                setIsLoading(false)
-                setDownloadBrochure(!downloadBrochure)
-                setFirstName('')
-                setEmail('')
-                setPhone('')
-                setPassengers('')
-                setDepartureCity('')
-                message.success('Enquiry Send')
-            }
-            sendMail()
+            setIsLoading(true)
+            const enquiryUrl = process.env.REACT_APP_ENQUIRY_URL; // Accessing environment variable
+            await axios.post(enquiryUrl, formData);
+            setIsLoading(false)
+            setDownloadBrochure(!downloadBrochure)
+            setFirstName('')
+            setEmail('')
+            setPhone('')
+            setPassengers('')
+            setDepartureCity('')
+            message.success('Enquiry Send')
 
         } catch (error) {
             // Checking if it's a network error
@@ -275,7 +269,9 @@ function BillingPage({ temp, setTemp }) {
                                     Submit
                                     {isLoading && <img src={loader} alt="" className='w-[2rem]' />}
                                 </button>
+
                             </div>
+
                         </form>
                     </div>
                 </div>
