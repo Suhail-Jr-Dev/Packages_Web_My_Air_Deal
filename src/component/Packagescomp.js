@@ -36,6 +36,8 @@ function Packagescomp({ temp, setTemp }) {
         }
     }, [location.state]);
 
+    // console.log(getAllData[0][0])
+
 
 
 
@@ -51,7 +53,7 @@ function Packagescomp({ temp, setTemp }) {
                 <EnquiryPopUp temp={temp} setTemp={setTemp} />
             </div>
             {
-                getAllData.length > 0 ? <PageBanner data={flightData} image={getAllData[0][1]?.banner} /> : <PageBanner data={flightData} />
+                getAllData.length > 0 ? <PageBanner data={flightData} image={getAllData[0][0]?.banner} /> : <PageBanner data={flightData} />
             }
             <div className='flex py-10 items-center flex-col justify-center'>
                 {getAllData.length > 0 ? <h1 className='font-semibold text-[1.2rem] w-[90%] my-5'>Fixed Departures with Flights</h1> : ''}

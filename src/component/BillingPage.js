@@ -155,7 +155,6 @@ function BillingPage({ temp, setTemp }) {
                     <div className="hidden md:flex flex-col items-center text-center">
                         <p>From</p>
                         <h1 className="text-[2rem] md:text-[1.5rem] font-semibold">₹ {getBillingData?.price} <sup>*</sup></h1>
-                        <p className="text-[1rem] md:text-[0.9rem]">Commissionable</p>
                         <p className="text-[1rem] md:text-[0.9rem]">Per Person</p>
                     </div>
                 </div>

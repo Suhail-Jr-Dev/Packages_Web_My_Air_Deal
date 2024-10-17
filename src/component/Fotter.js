@@ -3,10 +3,12 @@ import { LiaCcVisa } from "react-icons/lia";
 import { FaCcMastercard } from "react-icons/fa6";
 import { SiApplepay, SiPaytm } from "react-icons/si";
 import { FaFacebook, FaInstagram } from "react-icons/fa6";
-import { FaLinkedinIn } from "react-icons/fa";
+import { FaLinkedinIn, FaTwitter, FaYoutube } from "react-icons/fa";
 import logo from '../assets/myairdeallogo.png';
 import { Link } from 'react-router-dom';
 import { message } from 'antd';
+import { TfiLocationPin } from "react-icons/tfi";
+import { TbBrandGmail } from "react-icons/tb";
 
 function Fotter({ setTemp }) {
   const EmailContent = "https://mail.google.com/mail/?view=cm&fs=1&to=support@bookmyjet.com&su=Inquiry%20About%20Your%20Services&body=Hello%2C%0D%0A%0D%0AI%20am%20interested%20in%20learning%20more%20about%20your%20services.%20Please%20provide%20me%20with%20additional%20information.%0D%0A%0D%0AThank%20you!";
@@ -23,68 +25,91 @@ function Fotter({ setTemp }) {
 
   const handleContactClick = () => {
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-    console.log(navigator.userAgent)
-
     if (isMobile) {
-      // Redirect to phone dialer on mobile
       window.location.href = `tel:${phoneNumber}`;
     } else {
-      // Copy to clipboard on desktop/laptop
       copyToClipboard();
     }
   };
 
+  const MyAirDealHandleClick = (element) => {
+    let URL = element.target.innerText;
+    const encodedAddress = encodeURIComponent(URL);
+    const mapUrl = `https://www.google.com/maps?q=${encodedAddress}`;
+    window.open(mapUrl);
+  };
+
   return (
-    <div className='bg-brandCol relative text-white py-11'>
-      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-around px-5 lg:px-10'>
-        <div className='text-[0.9rem] gap-1 flex flex-col'>
-          <h1 className='text-[1.2rem] mb-2'>About</h1>
-          <a className='underline' target='_blank' href="https://myairdeal.com/">About MyAirDeal</a>
-          <a className='underline' href="#" target='_blank'>News</a>
-          <a className='underline' href="https://myairdeal.com/terms-and-conditions" target='_blank'>Terms & Conditions</a>
-          <a className='underline' href="https://myairdeal.com/privacy-policy" target='_blank'>Privacy Policies</a>
+    <div className="bg-brandCol text-white py-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-5 lg:px-10">
+        <div className="flex flex-col gap-2">
+          <h1 className="text-lg font-semibold mb-3">About</h1>
+          <a className="underline hover:text-hoverColor" target='_blank' href="https://myairdeal.com/">About MyAirDeal</a>
+          <a className="underline hover:text-hoverColor" href="#" target='_blank'>News</a>
+          <a className="underline hover:text-hoverColor" href="https://myairdeal.com/terms-and-conditions" target='_blank'>Terms & Conditions</a>
+          <a className="underline hover:text-hoverColor" href="https://myairdeal.com/privacy-policy" target='_blank'>Privacy Policies</a>
         </div>
 
-        <div className='text-[0.9rem] gap-1 flex flex-col'>
-          <h1 className='text-[1.2rem] mb-2'>Contact Us</h1>
-          <a href={EmailContent} target="_blank" className='underline'>Help</a>
-          <a className='underline cursor-pointer' onClick={() => setTemp(true)}>Customer Support</a>
-          {/* <a className='underline' onClick={() => copyToClipboard()} href={`tel:'8668151532`} >Contact No : 8884466800 </a> */}
-          <a className='underline cursor-pointer' onClick={handleContactClick}>Contact No: {phoneNumber}</a>
+        <div className="flex flex-col gap-2">
+          <h1 className="text-lg font-semibold mb-3">Contact Us</h1>
+          <a href={EmailContent} target="_blank" className="underline hover:text-hoverColor">Help</a>
+          <a className="underline hover:text-hoverColor cursor-pointer" onClick={() => setTemp(true)}>Customer Support</a>
+          <a className="underline hover:text-hoverColor cursor-pointer" onClick={handleContactClick}>Contact No: {phoneNumber}</a>
         </div>
 
-        <div className='text-[0.9rem] gap-1 flex flex-col'>
-          <h1 className='text-[1.2rem] mb-2'>Other Services</h1>
-          <a className='underline' href="https://myairdeal.com/" target='_blank'>Flight Booking</a>
-          {/* <a className='underline' href="https://chartersdeployrepo.onrender.com" target='_blank'>Private Jets</a>
-          <a className='underline' href="https://chartersdeployrepo.onrender.com" target='_blank'>Charters</a>
-          <a className='underline' href="https://chartersdeployrepo.onrender.com" target='_blank'>Air Ambulance</a> */}
+        <div className="flex flex-col gap-2">
+          <h1 className="text-lg font-semibold mb-3">Other Services</h1>
+          <a className="underline hover:text-hoverColor" href="https://myairdeal.com/" target='_blank'>Flight Booking</a>
         </div>
 
-        <div className='flex flex-col gap-5'>
-          <div className='flex flex-col gap-3'>
-            <p>Payment Services</p>
-            <div className='flex gap-3'>
-              <LiaCcVisa className='w-[2rem] h-[2rem]' />
-              <FaCcMastercard className='w-[2rem] h-[2rem]' />
-              <SiApplepay className='w-[2rem] h-[2rem]' />
-              <SiPaytm className='w-[2rem] h-[2rem]' />
+        <div className="flex flex-col gap-5">
+          <div>
+            <h1 className="text-lg font-semibold mb-3">Payment Services</h1>
+            <div className="flex gap-3">
+              <LiaCcVisa className="w-8 h-8" />
+              <FaCcMastercard className="w-8 h-8" />
+              <SiApplepay className="w-8 h-8" />
+              <SiPaytm className="w-8 h-8" />
             </div>
           </div>
 
-          <div className='flex flex-col gap-3'>
-            <h1>Follow Us</h1>
-            <div className='flex gap-3'>
+          <div>
+            <h1 className="text-lg font-semibold mb-3">Follow Us</h1>
+            <div className="flex gap-3">
               <Link to={'https://www.facebook.com/profile.php?id=61561003964312'} target='_blank'>
-                <FaFacebook className='w-[1.5rem] h-[1.5rem] hover:cursor-pointer hover:fill-hoverColor' />
+                <FaFacebook className="w-6 h-6 hover:fill-hoverColor cursor-pointer" />
               </Link>
               <Link to={'https://www.instagram.com/myairdeal/'} target='_blank'>
-                <FaInstagram className='w-[1.5rem] h-[1.5rem] hover:cursor-pointer hover:fill-hoverColor' />
+                <FaInstagram className="w-6 h-6 hover:fill-hoverColor cursor-pointer" />
               </Link>
               <Link to={'https://in.linkedin.com/company/my-air-deal'} target='_blank'>
-                <FaLinkedinIn className='w-[1.5rem] h-[1.5rem] hover:cursor-pointer hover:fill-hoverColor' />
+                <FaLinkedinIn className="w-6 h-6 hover:fill-hoverColor cursor-pointer" />
               </Link>
+              <FaTwitter className="w-6 h-6 hover:fill-hoverColor cursor-pointer" />
+              <FaYoutube className="w-6 h-6 hover:fill-hoverColor cursor-pointer" />
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Location Section */}
+      <div className="flex flex-col  lg:flex-row justify-between gap-8 py-10 max-w-5xl mx-auto px-5">
+        <div className="flex items-start gap-2">
+          <TfiLocationPin className="text-2xl" />
+          <div>
+            <h1 className="text-lg font-semibold">INDIA</h1>
+            <p className="underline cursor-pointer hover:text-hoverColor" onClick={MyAirDealHandleClick}>
+              2nd Floor, Anjali Plaza, Jayanagar, Bangaluru, India - 560076
+            </p>
+          </div>
+        </div>
+        <div className="flex items-start gap-2">
+          <TfiLocationPin className="text-2xl" />
+          <div>
+            <h1 className="text-lg font-semibold">DUBAI - UAE</h1>
+            <p className="underline cursor-pointer hover:text-hoverColor" onClick={MyAirDealHandleClick}>
+              I 10, Black 1, Phase 1, Saih Shuaib 2, Dubai, UAE.
+            </p>
           </div>
         </div>
       </div>

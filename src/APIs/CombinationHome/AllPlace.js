@@ -1,16 +1,16 @@
 //Demostic Section
 import keralaimg1 from '../../assets/APIsImg/DomasticHome/kerala2.jpeg'
 import keralaimg2 from '../../assets/APIsImg/DomasticHome/keralaimg2.jpeg'
-import keralabanner from '../../assets/APIsImg/DomasticHome/kerala/keralabanner.jpeg'
+import keralabanner from '../../assets/APIsImg/DomasticHome/kerala/keralabanner.jpg'
 
 
 import shimlaimg1 from '../../assets/APIsImg/DomasticHome/shimla.jpeg'
 import shimlaimg2 from '../../assets/APIsImg/DomasticHome/shimla2.jpeg'
-import shimlahome from '../../assets/APIsImg/DomasticHome/shimlahome.jpeg'
+import shimlahome from '../../assets/APIsImg/DomasticHome/shimlahome.jpg'
 
 import mysore from '../../assets/APIsImg/DomasticHome/mysore.jpeg'
 import mysore2 from '../../assets/APIsImg/DomasticHome/mysore2.jpeg'
-import mysore3 from '../../assets/APIsImg/DomasticHome/mysorehome.jpeg'
+import mysore3 from '../../assets/APIsImg/DomasticHome/mysorehome.png'
 
 import shirdi from '../../assets/APIsImg/DomasticHome/Shirdi.jpeg'
 import shirdihome from '../../assets/APIsImg/DomasticHome/Shirdi4.jpeg'
