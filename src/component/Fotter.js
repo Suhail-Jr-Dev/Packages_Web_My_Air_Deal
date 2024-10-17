@@ -40,9 +40,9 @@ function Fotter({ setTemp }) {
         <div className='text-[0.9rem] gap-1 flex flex-col'>
           <h1 className='text-[1.2rem] mb-2'>About</h1>
           <a className='underline' target='_blank' href="https://myairdeal.com/">About MyAirDeal</a>
-          <a className='underline' href="#">News</a>
-          <a className='underline' href="https://myairdeal.com/terms-and-conditions">Terms & Conditions</a>
-          <a className='underline' href="https://myairdeal.com/privacy-policy">Privacy Policies</a>
+          <a className='underline' href="#" target='_blank'>News</a>
+          <a className='underline' href="https://myairdeal.com/terms-and-conditions" target='_blank'>Terms & Conditions</a>
+          <a className='underline' href="https://myairdeal.com/privacy-policy" target='_blank'>Privacy Policies</a>
         </div>
 
         <div className='text-[0.9rem] gap-1 flex flex-col'>
