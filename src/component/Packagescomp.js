@@ -101,7 +101,7 @@ function Packagescomp({ temp, setTemp }) {
                             <div className='flex flex-col justify-center items-center w-full'>
                                 {/* <ImageGrid /> */}
                                 <h1 className='text-[1.2rem] font-semibold text-brandCol'>
-                                    To get more details about <span className='text-[1.3rem] font-bold'>{flightData}</span> Package Kindlsy fill the form our team will reach you !
+                                    To get more details about <span className='text-[1.3rem] font-bold'>{flightData}</span> Package Kindly fill the form our team will reach you !
                                 </h1>
                                 <BookingFormPakCom />
 
