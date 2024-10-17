@@ -4,7 +4,7 @@ import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { RiTwitterXLine } from "react-icons/ri";
 
 import flightfront from '../assets/APIsImg/DomasticHome/goa/Goahome.png'
-import { Img } from 'react-image';
+
 
 function PageBanner({ data , image }) {
 
