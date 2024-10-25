@@ -19,8 +19,8 @@ function App() {
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<LandingPage temp={temp} setTemp={setTemp} />} />
-        <Route path="/packages" element={<Packagescomp temp={temp} setTemp={setTemp} />} />
-        <Route path="/billingpage" element={<BillingPage temp={temp} setTemp={setTemp} />} />
+        <Route path="/packages/:pkgPlace" element={<Packagescomp temp={temp} setTemp={setTemp} />} />
+        <Route path="/billingpage/:pkgData" element={<BillingPage temp={temp} setTemp={setTemp} />} />
       </Routes>
       <Fotter setTemp={setTemp} />
     </Router>

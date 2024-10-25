@@ -20,21 +20,23 @@ function Packagescomp({ temp, setTemp }) {
     const [getAllData, setGetAllData] = useState([]);
     const [getSeo, setGetSeo] = useState();
 
+    console.log(location?.pathname.split('/')[2])
+
     // Function to filter AllPlace by key
     const filterByKey = (key) => {
-        return AllPlace.map(placeObj => placeObj[key]).filter(Boolean);
+        return AllPlace.map(placeObj => placeObj[key])?.filter(Boolean);
     };
 
-    const flightData = location.state;
+    const flightData = location?.pathname.split('/')[2];
     useEffect(() => {
-        setGetSeo(SEOPlace[0][flightData.toLowerCase()])
+        setGetSeo(SEOPlace[0][flightData?.toLowerCase()])
         if (flightData) {
             setGetPlace(flightData);
-            const response = filterByKey(flightData.toLowerCase());
+            const response = filterByKey(flightData?.toLowerCase());
             setGetAllData(response);
 
         }
-    }, [location.state]);
+    }, []);
 
     // console.log(getAllData[0][0])
 
@@ -87,7 +89,7 @@ function Packagescomp({ temp, setTemp }) {
                                                     <sup className='font-bold '>*</sup> </span> per person</h1>
                                                 <p className=' text-gray-400 text-[0.9rem]'>Includes Taxes & Fess</p>
                                             </div>
-                                            <Link to="/billingpage" state={{ place: getPlace, id: e.id }} class="inline-flex hover:scale-105 transition-all duration-300 items-center py-3 px-2 text-sm font-medium text-center text-white bg-brandCol rounded-lg hover:bg-blue-800 ">
+                                            <Link to={`/billingpage/${encodeURIComponent(JSON.stringify({ place: getPlace, id: e.id }))}`} class="inline-flex hover:scale-105 transition-all duration-300 items-center py-3 px-2 text-sm font-medium text-center text-white bg-brandCol rounded-lg hover:bg-blue-800 ">
                                                 View Details
 
                                                 <FaArrowRight className='mx-2' />

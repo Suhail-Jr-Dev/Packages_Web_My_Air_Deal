@@ -3,7 +3,7 @@ import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 import flightfront from '../assets/CarouselImg/carplace1.jpg';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 import AllPlace from '../APIs/CombinationHome/AllPlace';
 import EnquiryPopUp from './EnquiryPopup';
 import axios from 'axios'
@@ -16,29 +16,32 @@ import loader from '../assets/loaderimg.gif'
 
 function BillingPage({ temp, setTemp }) {
 
+    const { pkgData } = useParams();
+    console.log(JSON.parse(decodeURIComponent(pkgData)).place)
+
     const location = useLocation();
     const [getPlace, setGetPlace] = useState('');
     const [getAllData, setGetAllData] = useState([]);
     const [getBillingData, setGetBillingData] = useState(null);
-    const [downloadBrochure, setDownloadBrochure] = useState(false)
+
 
     // Function to filter AllPlace by key
     const filterByKey = (key) => {
-        return AllPlace.map(placeObj => placeObj[key]).filter(Boolean);
+        return AllPlace?.map(placeObj => placeObj[key])?.filter(Boolean);
     };
 
-    const flightData = location.state;
+    const flightData = JSON.parse(decodeURIComponent(pkgData));
     useEffect(() => {
         if (flightData) {
             setGetPlace(flightData);
-            const response = filterByKey(flightData.place.toLowerCase());
+            const response = filterByKey(flightData?.place?.toLowerCase());
             setGetAllData(response);
         }
-    }, [location.state]);
+    }, []);
 
     useEffect(() => {
-        if (getAllData.length > 0) {
-            setGetBillingData(getAllData[0][flightData.id - 1]);
+        if (getAllData?.length > 0) {
+            setGetBillingData(getAllData[0][flightData?.id - 1]);
         }
     }, [getAllData, flightData]);
 
@@ -77,33 +80,43 @@ function BillingPage({ temp, setTemp }) {
             email: email,
         };
 
-        if (formData.phone < 0 || formData.passengers < 0) {
+        if (formData?.phone < 0 || formData?.passengers < 0) {
             message.error('Enter the Phone Number or Passengers !!!')
+            return 1;
+        }
+        if (formData?.phone?.length < 10 || formData?.phone?.length > 10) {
+            message.error('Enter the Phone Number Correctly !!!')
             return 1;
         }
 
 
         try {
-            setIsLoading(true)
-            const enquiryUrl = process.env.REACT_APP_ENQUIRY_URL; // Accessing environment variable
-            await axios.post(enquiryUrl, formData);
-            setIsLoading(false)
-            setDownloadBrochure(!downloadBrochure)
-            setFirstName('')
-            setEmail('')
-            setPhone('')
-            setPassengers('')
-            setDepartureCity('')
-            message.success('Enquiry Send')
+            setIsLoading(true);
+            const enquiryUrl = process.env.REACT_APP_ENQUIRY_URL; // Ensure you have a fallback URL
+            const response = await axios.post(enquiryUrl, formData);
+
+            // Check response status
+            if (response.status === 200) {
+
+                setFirstName('');
+                setEmail('');
+                setPhone('');
+                setPassengers('');
+                setDepartureCity('');
+                message.success('Enquiry Sent');
+            } else {
+                message.error('Enquiry failed: Unexpected response.');
+            }
 
         } catch (error) {
+            console.error("Error details:", error); // Log the error details
             // Checking if it's a network error
             if (!error.response) {
                 // Network error
                 message.error('Network error: Please check your internet connection.');
             } else {
                 // Other error response (like 400 or 500 status codes)
-                message.error('Enquiry failed: ' + error.response?.data?.message || 'Something went wrong. Please try again later.');
+                message.error('Enquiry failed: ' + (error.response?.data?.message || 'Something went wrong. Please try again later.'));
             }
         } finally {
             setIsLoading(false);
@@ -111,22 +124,13 @@ function BillingPage({ temp, setTemp }) {
 
 
 
+
+
     };
 
-
-    let LocationObject = useLocation()
-    let LocationPlace = LocationObject?.state?.place;
+    let LocationPlace = JSON.parse(decodeURIComponent(pkgData))?.place
 
 
-    function trimAllSpaces(str) {
-        // Remove leading and trailing spaces
-        str = str.trim();
-
-        // Replace multiple spaces between words with a single space
-        str = str.replace(/\s+/g, '');
-
-        return str;
-    }
 
 
 
