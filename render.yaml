@@ -2,7 +2,7 @@ version: 1
 services:
   - type: static
     name: my-static-site
-    src: public  # This should point to your public directory
+    src: build  # Pointing to the build directory after running npm run build
     routes:
       - src: /.*
-        dest: /index.html  # This ensures all routes go to index.html
+        dest: /index.html  # Route all requests to index.html
