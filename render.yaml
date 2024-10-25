@@ -2,7 +2,7 @@ version: 1
 services:
   - type: static
     name: my-static-site
-    src: . # Pointing to the public directory
+    src: public  # This should point to your public directory
     routes:
       - src: /.*
-        dest: /index.html  # Route all requests to index.html
+        dest: /index.html  # This ensures all routes go to index.html
