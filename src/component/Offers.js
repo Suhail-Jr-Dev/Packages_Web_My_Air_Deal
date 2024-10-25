@@ -51,6 +51,7 @@ function Offers() {
                         Exclusive Deals on Holiday Packages
                     </h1>
                     <div className='flex space-x-2 items-center'>
+
                         {/* Single Left Button */}
                         <button
                             onClick={scrollLeft}
@@ -58,13 +59,14 @@ function Offers() {
                         >
                             <img src={leftArrow} alt="Left Arrow" />
                         </button>
+
                         {/* Single Right Button */}
                         <button
                             onClick={scrollRight}
-                            className="bg-white bg-opacity-90 text-white w-[2.5rem] p-2 flex items-center justify-center rounded-r-lg hover:bg-hoverColor transition"
-                        >
+                            className="bg-white bg-opacity-90 text-white w-[2.5rem] p-2 flex items-center justify-center rounded-r-lg hover:bg-hoverColor transition" >
                             <img src={rightArrow} alt="Right Arrow" />
                         </button>
+
                     </div>
                 </div>
 
