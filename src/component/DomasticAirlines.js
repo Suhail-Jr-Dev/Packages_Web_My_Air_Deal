@@ -70,7 +70,7 @@ function DomasticAirlines() {
                     >
                         {domasticData?.map((place, index) => (
                             // <Link to={'/packages'} state={place.place} >
-                            <div key={index} className="carousel-item bg-red-900 cursor-pointer hover:scale-105 transition-all duration-300 min-w-[300px] py-10 sm:min-w-[300px] lg:min-w-[350px] flex items-center justify-center">
+                            <div key={index} className="carousel-item  cursor-pointer hover:scale-105 transition-all duration-300 min-w-[300px] py-10 sm:min-w-[300px] lg:min-w-[350px] flex items-center justify-center">
 
                                 <div key={index} className="relative w-[20rem] h-[27rem] flex items-center justify-center">
                                     <div className="absolute inset-0 w-[90%] h-full bg-gray-200 rounded-lg  transform translate-y-[-1rem] translate-x-4 z-0"></div>
