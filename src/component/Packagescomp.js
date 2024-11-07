@@ -44,7 +44,7 @@ function Packagescomp({ temp, setTemp }) {
 
 
     return (
-        <div id='xyzData'>
+        <div id='xyzData' className='bg-white'>
 
             <Helmet>
                 <title>{getSeo?.title}</title>
