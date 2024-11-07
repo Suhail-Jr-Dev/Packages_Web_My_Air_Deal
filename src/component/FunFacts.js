@@ -72,7 +72,9 @@ function FunFacts() {
           <h1 className="font-bold flex text-xl md:text-2xl lg:text-3xl">
             <Number n={1100} isVisible={isVisible} /> +
           </h1>
-          <p className="text-sm md:text-base">Travel Completed</p>
+          <p className="text-sm md:text-base w-[10rem] md:w-auto">
+            Travel Completed
+          </p>
         </div>
 
         {/* Happy Clients */}
@@ -81,7 +83,9 @@ function FunFacts() {
           <h1 className="font-bold flex text-xl md:text-2xl lg:text-3xl">
             <Number n={1} isVisible={isVisible} /> k+
           </h1>
-          <p className="text-sm md:text-base">Happy Clients</p>
+          <p className="text-sm md:text-base w-[10rem]  md:w-auto">
+            Happy Clients
+          </p>
         </div>
 
         {/* Branches */}
@@ -90,7 +94,9 @@ function FunFacts() {
           <h1 className="font-bold flex text-xl md:text-2xl lg:text-3xl">
             <Number n={2} isVisible={isVisible} /> +
           </h1>
-          <p className="text-sm md:text-base">Branches in India and Dubai</p>
+          <p className="text-sm md:text-base  w-[10rem] md:w-auto ">
+            Branches in India and Dubai
+          </p>
         </div>
 
         {/* Our Team */}
@@ -99,7 +105,7 @@ function FunFacts() {
           <h1 className="font-bold flex text-xl md:text-2xl lg:text-3xl">
             <Number n={100} isVisible={isVisible} /> +
           </h1>
-          <p className="text-sm md:text-base">Our Team</p>
+          <p className="text-sm md:text-base w-[10rem] md:w-auto ">Our Team</p>
         </div>
       </div>
     </div>

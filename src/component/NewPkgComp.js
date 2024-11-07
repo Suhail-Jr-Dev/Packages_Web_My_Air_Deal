@@ -138,6 +138,15 @@ function NewPkgComp({ temp, setTemp }) {
       await axios.post(enquiryUrl, updatedFormData);
 
       // Reset form, clear local storage, etc.
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        origin: "",
+        pax: "",
+        date: formattedDate,
+        packageName: localStorage.getItem("place") || "Generic Place",
+      });
       setIsLoading(false);
       localStorage.clear();
       message.success("Form submission is successful");
